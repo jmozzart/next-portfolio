@@ -1,0 +1,8 @@
+{ "menuitems": [
+    ["About", "about"],
+    ["Skills", "skills"],
+    ["Experiences", "experiences"],
+    ["Projects", "projects"],
+    ["Contact", "contact"],
+    ["Resume", "resume"]
+]}
