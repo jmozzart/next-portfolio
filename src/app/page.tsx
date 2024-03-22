@@ -1,92 +1,320 @@
 import Image from "next/image";
+import * as Icons from "@/components/Icons";
+import Link from "next/link";
+
+const s = 33;
+
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
- 
-      </div>
+    <main>
+      <section className="">
+        <div className="container mx-auto pt-32">
+          <div className="flex justify-between">
+            <div className="lg:pt-20 p-8 md:p-4">
+              <p className="text-lg mt-4 font-mono text-gray-600">
+                Hello, I am
+              </p>
+              <h1>
+                Cyril Nicko Gaspar
+              </h1>
+              <p className="text-xl lg:text-2xl font-bold  mt-4 text-slate-700 text-slate">
+                Web Developer
+              </p>
+              <p className="text-l lg:text-xl text-slate-700 text-slate mt-1">
+                API | Automations Expert
+              </p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+              <div className="mt-4 grid grid-cols-[40px_auto] gap-3 text-gray-500 text-sm md:text-base items-center">
+                <span>
+                  <svg width={s} height={s} className="fill-gray-700">
+                    <Icons.PhoneIcon />
+                  </svg>
+                </span><span>+639158087114</span>
+                <span>
+                  <svg width={s} height={s} className="fill-gray-700">
+                    <Icons.EmailIcon />
+                  </svg></span>
+                <span>cyrilnicko@gmail.com</span>
+                <span>
+                  <svg width={s} height={s} className="fill-gray-700">
+                    <Icons.UpworkIcon />
+                  </svg></span>
+                <span>
+                  <Link
+                    href="https://www.upwork.com/freelancers/~013f1afa3db163b9c1"
+                    target="_blank"
+                  >Upwork Profile Link</Link>
+                </span>
+                <span>
+                  <svg width={s} height={s} className="fill-gray-700">
+                    <Icons.FiverrIcon />
+                  </svg>
+                </span>
+                <span className="">
+                  <Link
+                    href="https://www.fiverr.com/cynick?public_mode=true"
+                    target="_blank"
+                  >Fiverr Profile Link</Link>
+                </span>
+              </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+            </div>
+            <div className="hidden lg:block">
+              <Image
+                src="/images/niksnew.webp"
+                alt="Nick's Hero"
+                width={600}
+                height={37}
+                loading='lazy'
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section className="bg-gray-300/30">
+        <div className="container mx-auto m-10 px-4 py-10 md:grid grid-cols-2">
+          <h2 className="col-span-2">
+            Summary
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <div className="mb-10">
+            <h3>About Me</h3>
+            <p >
+              I specialize in web development, particularly focusing on E-commerce platforms such as Shopify, Woocommerce, Bigcommerce, and more. Proficient in Wordpress, Wix, and Webflow, I am dedicated to creating websites using cutting-edge methods to ensure the best user experience while keeping costs manageable. Whether it is upgrading your website to modern technologies or incorporating specific features, I am committed to enhancing your online presence.  Moreover, I excel in streamlining business operations by leveraging modern tools and scripting expertise, helping businesses automate their processes efficiently.
+            </p>
+          </div>
+          <div className="md:px-12">
+            <h3>Highlights </h3>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <div className="highlights-list grid grid-cols-[50px_auto] items-center text-sm md:text-base gap-y-6">
+              <span>
+                <svg width={s} height={s} className="fill-gray-700">
+                  <Icons.UWTopRated />
+                </svg>
+              </span>
+              <span>
+                Upwork Top Rated
+              </span>
+              <span>
+                <svg width={s} height={s} className="fill-gray-700">
+                  <Icons.UWJSS />
+                </svg>
+              </span>
+              <span>
+                100% Job Success Score in Upwork
+              </span>
+              <span>
+                <svg width={s} height={s} className="fill-gray-700">
+                  <Icons.ResponsiveIcon />
+                </svg>
+              </span>
+              <span>
+                Responsive Web Design
+              </span>
+              <span>
+                <svg width={s} height={s} className="fill-gray-700">
+                  <Icons.Gear />
+                </svg>
+              </span>
+              <span>
+                Automations (Zapier, Make)
+              </span>
+              <span>
+                <svg width={s} height={s} className="fill-gray-700 hover:fill-slate-700">
+                  <Icons.CRM />
+                </svg>
+              </span>
+              <span>
+                CRM Development (GoHIghLevel, Hubspot, Monday.com, Clickfunnels)
+              </span>
+              <span>
+                <svg width={s} height={s} className="fill-gray-700">
+                  <Icons.AI />
+                </svg>
+              </span>
+              <span>
+                AI Integrations (OpenAI, Mistral, Langchain)
+              </span>
+              <span>
+                <svg width={s} height={s} className="fill-gray-700">
+                  <Icons.Plug />
+                </svg>
+              </span>
+              <span>
+                API Development and Integrations
+              </span>
+              <span>
+                <svg width={s} height={s} className="fill-gray-700">
+                  <Icons.EcomLogo />
+                </svg>
+              </span>
+              <span>
+                Ecommerce Development (Shopify, Woocommerce, Wix, Webflow)
+              </span>
+            </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+          </div>
+        </div>
+      </section>
+      <section className="transition-all duration-700 ease-in ">
+        <div className="container mx-auto m-10 p-4">
+          <h2>
+            Skills
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
+          <p className="mb-10">
+            I have worked with various clients in creating and maintaining their websites. I have also worked with various clients in automating their business processes. I have also worked with various clients in creating and maintaining their E-commerce platforms. I have also worked with various clients in creating and maintaining their blogs and portfolios.
           </p>
-        </a>
+          <h3>Frontend Development Skills</h3>
+          <div className="skills-block flex flex-wrap justify-around leading-10">
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.HTML />
+                </svg>
+              </div>
+              <p>
+                HTML
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.CSS />
+                </svg>
+              </div>
+              <p>
+                CSS
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.JS />
+                </svg>
+              </div>
+              <p>
+                JavaScript
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.React />
+                </svg>
+              </div>
+              <p>
+                React
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.SASS />
+                </svg>
+              </div>
+              <p>
+                Sass
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.TypeScript />
+                </svg>
+              </div>
+              <p>
+                TypeScript
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.TailwindCSS />
+                </svg>
+              </div>
+              <p>
+                TailwindCSS
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.NextJS />
+                </svg>
+              </div>
+              <p>
+                NextJS
+              </p>
+            </div>
+          </div>
+          <h3>Backend / Server Setup Skills</h3>
+          <div className="skills-block flex flex-wrap justify-around leading-10">
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.NodeJS />
+                </svg>
+              </div>
+              <p>
+                NodeJS
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.Vercel />
+                </svg>
+              </div>
+              <p>
+                Vercel
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.Firebase />
+                </svg>
+              </div>
+              <p>
+                Firebase
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.Netlify />
+                </svg>
+              </div>
+              <p>
+                Netlify
+              </p>
+            </div>
+            <div>
+              <div>
+                <svg width={100} height={100}>
+                  <Icons.Azure />
+                </svg>
+              </div>
+              <p>
+                Azure
+              </p>
+            </div>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+        </div>
+      </section>
+      <section>
+        <div className="container mx-auto m-10 p-4">
+          <h2>
+            Work Experience
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p>
+            I have worked with various clients in creating and maintaining their websites. I have also worked with various clients in automating their business processes. I have also worked with various clients in creating and maintaining their E-commerce platforms. I have also worked with various clients in creating and maintaining their blogs and portfolios.
           </p>
-        </a>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }

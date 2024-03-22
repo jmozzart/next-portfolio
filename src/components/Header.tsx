@@ -1,18 +1,25 @@
 "use client";
 import Image from 'next/image';
-import { menuitems } from './menu-items.json';
 import { useState } from 'react';
 import Link from 'next/link';
+
+const menuitems = [
+    ["About", "about"],
+    ["Skills", "skills"],
+    ["Experiences", "experiences"],
+    ["Projects", "projects"],
+    ["Contact", "contact"]
+]
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <header className="bg-gray-300 sticky top-0 z-50">
+        <header className="bg-gray-300 fixed top-0 z-50 w-full">
             <div className="container mx-auto flex justify-between px-4 py-2">
                 <Link href="/">
                     <Image
-                        src="/logo.svg"
+                        src="/images/logo.svg"
                         alt="Cyril Nicko"
                         width={250}
                         height={40}
@@ -22,8 +29,9 @@ export default function Header() {
                 </Link>
                 <nav className="hidden sm:flex justify-center font-medium pt-1">
                     {menuitems.map(([title, url]) => (
-                        <Link href={"/" + url} key={url} className="px-3 py-2 text-center">
-                            {title}
+                        <Link href={"/" + url} key={url} className="px-1.5 lg:px-3 py-2 text-center hover:text-cyan-800 text-xs lg:text-base
+                                                    hover:underline decoration-8 decoration-slate-700 underline-offset-8">
+                                                    {title}
                         </Link>
                     ))}
                 </nav>
