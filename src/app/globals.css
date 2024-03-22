@@ -48,15 +48,17 @@ p {
   }
 }
 
-.skills-block p {
-  @apply text-center font-semibold
+
+.skills-block>div:hover svg {
+  @apply fill-slate-700
 }
-.skills-block>div {
-  @apply mb-10 px-3
+.skills-block>div:hover p {
+  @apply text-slate-700
 }
-.skills-block>div {
-  @apply fill-gray-700 text-gray-700
+.contact-info svg {
+  @apply w-6 h-6 fill-gray-700 dark:fill-gray-300
 }
-.skills-block>div:hover {
-  @apply fill-slate-700 text-slate-700
+
+.contact-info span {
+  @apply text-gray-700 dark:text-gray-300
 }
