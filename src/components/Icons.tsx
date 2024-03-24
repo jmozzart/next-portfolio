@@ -424,7 +424,7 @@ export function Make() {
 
 export function PowerAutomate() {
 	return (
-		<svg viewBox="0 0 24 24"><path d="m20.079 7.235 3.666 4.097c.34.38.34.956 0 1.336l-7.63 8.528c-.19.213-.462.334-.748.334H7.289l12.79-14.295ZM6.789 21.53H1.005c-.867 0-1.326-1.025-.748-1.671L15.748 2.545c.139.057.265.145.367.259l3.631 4.058a.478.478 0 0 0-.039.039L6.916 21.197a.497.497 0 0 0-.127.333Zm8.356-19.06-8.192 9.155L.257 4.141c-.578-.646-.119-1.671.748-1.671h14.14Z"/></svg>
+		<svg viewBox="0 0 24 24"><path d="m20.079 7.235 3.666 4.097c.34.38.34.956 0 1.336l-7.63 8.528c-.19.213-.462.334-.748.334H7.289l12.79-14.295ZM6.789 21.53H1.005c-.867 0-1.326-1.025-.748-1.671L15.748 2.545c.139.057.265.145.367.259l3.631 4.058a.478.478 0 0 0-.039.039L6.916 21.197a.497.497 0 0 0-.127.333Zm8.356-19.06-8.192 9.155L.257 4.141c-.578-.646-.119-1.671.748-1.671h14.14Z" /></svg>
 	)
 }
 
@@ -442,5 +442,37 @@ export function Velo() {
 
 		</svg>
 
+	)
+}
+
+
+export function Test() {
+	return (
+		<svg cx="50%" cy="50%" width="139" height="160" viewBox="0 0 139 160" ><title></title><desc></desc>
+		<defs><clipPath id="recharts1-clip"><rect x="0" y="0" height="160" width="139"></rect></clipPath></defs>
+			<text className="dark:fill-gray-100" x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" >38</text>
+			<g>
+				<g className="fill-mainaccent-700"><path cx="69.5" cy="80" name="Upwork" stroke="" strokeLinejoin="round" fill="" color="blue" d="M 69.5,10.5
+   			 A 69.5,69.5,0,1,1,36.42165618392339,141.123425708851 L 44.69124213794254,125.84256928163825 A 52.125,52.125,0, 1,0,
+            69.5,27.875 Z" role="img" ></path></g>
+				<g className="fill-blue-600">
+					<path cx="69.5" cy="80" name="Fiverr" stroke="" strokeLinejoin="round" color="cyan"
+						d="M 36.42165618392339,141.123425708851 A 69.5,69.5,0, 0,1, 46.933386890274484,14.265701701805895
+  			L 52.575040167705865,30.699276276354418 A 52.125,52.125,0,0,0,44.69124213794254,125.84256928163825 Z" role="img">
+					</path></g>
+				<g className="fill-cyan-700"><path cx="69.5" cy="80" name="Direct"
+					d="M 46.933386890274484,14.265701701805895
+    		A 69.5,69.5,0, 0,1, 69.49999999999999,10.5 L 69.49999999999999,27.875 A 52.125,52.125,0, 0,0, 52.575040167705865,30.699276276354418 Z"
+					role="img" ></path></g>
+			</g>
+		</svg>
+	)
+}
+
+export function Test2() {
+	return (
+		<svg cx="50%" cy="50%" width="134" height="160" viewBox="0 0 134 160"><title>dfjsdl</title><desc>dsljkldj</desc><defs><clipPath id="recharts3-clip"><rect x="0" y="0" height="160" width="134"></rect></clipPath></defs><text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" className="dark:fill-gray-100">$ 4,774.17</text><g >
+			<g className="fill-mainaccent-700"><path cx="67" cy="80" name="Upwork" stroke="" strokeLinejoin="round" fill="" color="blue" d="M 67,13 A 67,67,0, 1,1, 0.19203423839569211,74.93090631411228 L 16.894025678796773,76.1981797355842 A 50.25,50.25,0, 1,0,67,29.75 Z" role="img" ></path></g><g className="fill-blue-600 hover:stroke-blue-600 hover:stroke-2"><path cx="67" cy="80" name="Fiverr" stroke="" strokeLinejoin="round" fill="" color="cyan" d="M 0.19203423839569211,74.93090631411228 A 67,67,0, 0,1, 53.42711208106635,14.389202767074494 L 56.82033406079976,30.79190207530587 A 50.25,50.25,0, 0,0,16.894025678796773,76.1981797355842 Z" role="img" ></path></g><g className="fill-cyan-700"><path cx="67" cy="80" name="Direct" stroke="" strokeLinejoin="round" fill="" color="sky" d="M 53.42711208106635,14.389202767074494 A 67,67,0,
+    0,1,66.99999999999993,13 L 66.99999999999994,29.75 A 50.25,50.25,0, 0,0, 56.82033406079976,30.79190207530587 Z" role="img" ></path></g></g></svg>
 	)
 }

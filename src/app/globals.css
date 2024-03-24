@@ -27,7 +27,7 @@ body {
 }
 
 h2 {
-  @apply text-4xl font-bold text-center mt-1 mb-8 text-slate-700
+  @apply text-4xl font-bold text-center mt-1 mb-8 text-mainaccent-700
 }
 
 h1 {
@@ -50,10 +50,10 @@ p {
 
 
 .skills-block>div:hover svg {
-  @apply fill-slate-700
+  @apply fill-mainaccent-700
 }
 .skills-block>div:hover p {
-  @apply text-slate-700
+  @apply text-mainaccent-700
 }
 .contact-info svg {
   @apply w-6 h-6 fill-gray-700 dark:fill-gray-300

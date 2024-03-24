@@ -14,12 +14,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        slate: {
+        mainaccent: {
           700: "#179FB7",
-        },
-        sky: {
-          200: "#93C5FD",
-        },
+        }
       },
     },
   },
