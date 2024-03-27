@@ -32,10 +32,6 @@ function strokeDashoffset(percentage: number, runningTotal: number) {
     const circumference = 100
     const strokeDashoffset = circumference - runningTotal + 25
 
-    // keep this for future reference
-    /* strokeDasharray={`${item.percentage} ${100 - item.percentage}`}
-    strokeDashoffset={strokeDashoffset(item.percentage, runningTotal)} */
-
     return strokeDashoffset;
 }
 
@@ -87,7 +83,7 @@ export function DonutChart({ data, type }: DonutChartProps) {
                     <g key={index}>
 
                         <motion.circle cx="21" cy="21" r="15.91549430918954"
-
+                            transform={`rotate(-90 21 21)`}
                             fill="transparent"
                             stroke={COLORS[index]}
                             strokeWidth="5"
@@ -97,7 +93,9 @@ export function DonutChart({ data, type }: DonutChartProps) {
                             }}
                             whileInView={{
                                 pathLength: (item.percentage / 100) + 0.01,
-                                transition: { duration: 0.5, delay: 0.2 * index }
+                                transition: { duration: 0.5,
+                                    delay: index == 0 ? 0 : 0.5 * index
+                                 }
                             }}
                             viewport={{ once: true }}
                         />

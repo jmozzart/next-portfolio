@@ -50,13 +50,21 @@ function urlFor (source: SanityImageSource) {
     }
   }
 
+  const query = `*[_type == "projects"]`;
+  const queryUrl = "https://xle5b8xj.api.sanity.io/v2022-03-07/data/query/checkdataset?query=*%5B_type+%3D%3D+%22projects%22%5D&perspective=published";
+
 export default async function ProjectsList() {
 
 /* const x = await getServerSideProps()
 const projects = x.props.posts */
-const projects = await client.fetch(`*[_type == "projects"]`);
+const projects = await client.fetch(`*[_type == "projects"]`)
+/* const fprojects = await fetch(queryUrl, { next: { revalidate: 60 } })
+const projects = (await fprojects.json()).result */
+
+console.log(projects)
     return (
         <>
+        <h3>Featured Projects</h3>
             {projects.length > 0 && (
                 <div className="flex flex-wrap justify-center">
                     {projects.map((project: Project) => (
