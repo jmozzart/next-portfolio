@@ -1,88 +1,73 @@
 "use client"
 
-import * as Icons from '@/components/Icons';
-import { DonutChart, GaugeChart } from '@/components/Charts';
+import { DonutChart, StarRating } from '@/components/Charts';
 import * as fadein from '@/components/AnimatedBlock';
 
-
-
-const data = [
+const platforms = [
   {
     name: 'Upwork',
-    value: 22,
+    projectsCount: 22,
+    earnings: 3638.17,
+    averageReviews: 5,
   },
   {
     name: 'Fiverr',
-    value: 14,
+    projectsCount: 14,
+    earnings: 981,
+    averageReviews: 5,
   },
   {
     name: 'Direct',
-    value: 2,
+    projectsCount: 3,
+    earnings: 455,
+    averageReviews: null,
   }
 ];
-const earnings = [
-  {
-    name: 'Upwork',
-    value: 3638.17,
-  },
-  {
-    name: 'Fiverr',
-    value: 981,
-  },
-  {
-    name: 'Direct',
-    value: 155,
-  }
-];
+
+const projectscount = platforms.map(platform => ({ name: platform.name, value: platform.projectsCount }));
+const earnings = platforms.map(platform => ({ name: platform.name, value: platform.earnings }));
+const filteredPlatforms = platforms.filter(platform => platform.averageReviews !== null);
+const aveReviews = filteredPlatforms.reduce((total, platform) => total + (platform.averageReviews || 0), 0) / filteredPlatforms.length;
 
 const StatsSection = () => (
   <>
-    <div className="mx-auto block md:flex justify-center">
+    <div className="mx-auto block md:flex flex-wrap justify-center">
 
-      <div className="py-3 mx-10">
+      <fadein.div className="py-3 mx-10">
         <div className="flex justify-center mb-3">
           <svg width={300} height={310}>
-            <DonutChart data={data} type="integer" />
+            <DonutChart data={projectscount} type="integer" />
           </svg>
         </div>
-        <fadein.div className="text-center block font-semibold text-gray-700">
+        <div className="text-center block font-semibold text-gray-700 dark:text-gray-100">
           Projects Completed
-        </fadein.div>
-      </div>
+        </div>
+      </fadein.div>
 
-      <div className="py-3 mx-10">
+      <fadein.div className="py-3 mx-10">
         <div className="flex justify-center mb-3">
           <svg width={300} height={310}>
             <DonutChart data={earnings} type="currency" />
           </svg>
         </div>
-        <fadein.div className="text-center block font-semibold text-gray-700">
+        <div className="text-center block font-semibold text-gray-700 dark:text-gray-100">
           Earnings Milestone
-        </fadein.div>
-      </div>
+        </div>
+      </fadein.div>
 
-      <div className="py-3 mx-10">
+      <fadein.div className="py-3 mx-10">
         <div className="flex justify-center mb-3">
-          <svg width={300} height={310}>
-            <GaugeChart percentage={100} text="100%" /> 
+         
+            <svg width={300} height={310} >
+           <StarRating rating={aveReviews} />
           </svg>
         </div>
-        <fadein.div className="text-center block font-semibold text-gray-700">
-          Upwork Job Success Score
-        </fadein.div>
-      </div>
-
-      <div className="py-3 mx-10">
-        <div className="flex justify-center mb-3">
-          <svg width={300} height={310}>
-            <GaugeChart percentage={70} text="7/10" />
-          </svg>
+        <div className="text-center block font-semibold text-gray-700 dark:text-gray-100">
+          Average Client Ratings
         </div>
-        <fadein.div className="text-center block font-semibold text-gray-700">
-          Fiverr Success Score
-        </fadein.div>
-      </div>
+      </fadein.div>
 
+      
     </div>
   </>
 );

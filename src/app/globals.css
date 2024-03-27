@@ -27,11 +27,11 @@ body {
 }
 
 h2 {
-  @apply text-4xl font-bold text-center mt-1 mb-8 text-mainaccent-700
+  @apply text-4xl font-bold text-center mt-1 mb-8 text-mainaccent-700 dark:text-cyan-200
 }
 
 h1 {
-  @apply text-4xl lg:text-5xl font-bold mt-4
+  @apply text-4xl lg:text-5xl font-bold mt-4 
 }
 h3 {
   @apply text-2xl font-semibold text-center lg:text-left mt-1 mb-5 
@@ -41,6 +41,14 @@ p {
   @apply text-sm text-justify md:text-base mt-4 leading-6 md:leading-8 
 }
 
+.splitbg {
+  background: linear-gradient(65deg, transparent 50%, #179FB7 50%)
+}
+@media (max-width: 1023px) {
+  .splitbg {
+    background: transparent;
+  }
+}
 
 @layer utilities {
   .text-balance {
@@ -59,6 +67,3 @@ p {
   @apply w-6 h-6 fill-gray-700 dark:fill-gray-300
 }
 
-.contact-info span {
-  @apply text-gray-700 dark:text-gray-300
-}

@@ -1,17 +1,19 @@
-//"use client";
+
 import Image from "next/image";
 import * as Icons from "@/components/Icons";
 import Link from "next/link";
 import SkillsSection from "@/components/SkillsSection";
 import StatsSection from "@/components/StatsSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import React from 'react';
 import * as fadein from '@/components/AnimatedBlock';
+//import dynamic from "next/dynamic";
+
+//const DynamicComponentWithNoSSR = dynamic(
 
 const contacts = [
   { icon: <Icons.PhoneIcon />, text: '+639158087114' },
-  { icon: <Icons.EmailIcon />, text: 'cyrilnicko@gmail.com' },
-  { icon: <Icons.UpworkIcon />, link: 'https://www.upwork.com/freelancers/~013f1afa3db163b9c1', text: 'Upwork Profile Link' },
-  { icon: <Icons.FiverrIcon />, link: 'https://www.fiverr.com/cynick?public_mode=true', text: 'Fiverr Profile Link' },
+  { icon: <Icons.EmailIcon />, text: 'cyrilnicko@gmail.com' }
 ];
 const highlights = [
   { icon: <Icons.UWTopRated />, text: 'Upwork Top Rated' },
@@ -28,11 +30,11 @@ export default function Home() {
 
   return (
     <main>
-      <section className="">
+      <section className="splitbg">
         <div className="container mx-auto pt-32">
           <div className="flex justify-between">
             <div className="lg:pt-20 p-8 md:p-4 overflow-visible">
-              <p className="text-lg mt-4 font-mono text-gray-600">
+              <p className="text-lg mt-4 font-mono text-gray-600 dark:text-gray-400">
                 Hello, I am
               </p>
               <h1>
@@ -41,25 +43,53 @@ export default function Home() {
               <p className="text-xl lg:text-2xl font-bold  mt-4 text-mainaccent-700 text-slate">
                 Web Developer
               </p>
-              <p className="text-l lg:text-xl text-mainaccent-700 text-slate mt-1">
+              <p className="text-l lg:text-xl text-mainaccent-700 text-slate mt-1 dark:text-cyan-500">
                 API | Automations Expert
               </p>
 
               <div className="contact-info mt-4 text-gray-500 text-sm md:text-base items-center">
                 {contacts.map((contact, index) => (
-                  <fadein.div key={index} className="flex flex-row py-2">
+                  <div key={index} className="flex flex-row py-2">
                     <svg className="mr-3">{contact.icon}</svg>
-                    {contact.link ? (
-                      <Link href={contact.link} target="_blank">{contact.text}</Link>
-                    ) : (
-                      <span>{contact.text}</span>
-                    )}
-                  </fadein.div>
+                      <span className="text-gray-600 dark:text-gray-100">{contact.text}</span>
+                  </div>
                 ))}
+                <div className="py-2 flex flex-row space-x-4 mt-5">
+                <fadein.xdiv from="left" delay={0.6}>
+                    <Link href="https://www.upwork.com/freelancers/~013f1afa3db163b9c1" target="_blank"
+                    aria-label="Upwork Profile"
+                    >
+                      <Icons.UpworkIcon />
+                    </Link>
+                  </fadein.xdiv>
+                  <fadein.xdiv from="left" delay={0.4}>
+                    <Link href="https://www.fiverr.com/cynick?public_mode=true" target="_blank"
+                    aria-label="Fiverr Profile"
+                    >
+                      <Icons.FiverrIcon />
+                    </Link>
+                  </fadein.xdiv>
+                  <fadein.xdiv from="left" delay={0.2}>
+                    <Link href="https://www.linkedin.com/in/cyrilnicko/" target="_blank"
+                    aria-label="LinkedIn Profile"
+                    >
+                      <Icons.LinkedInIcon />
+                    </Link>
+                  </fadein.xdiv>
+                  <fadein.xdiv from="left" delay={0}>
+                    <Link href="https://www.github.com/jmozzart" target="_blank"
+                    aria-label="GitHub Profile"
+                    >
+                      <Icons.GitHubIcon />
+                    </Link>
+                  </fadein.xdiv>
+  
+                    
+                </div>
               </div>
 
             </div>
-            <fadein.div className="text-black hidden w-auto lg:w-1/2 lg:flex justify-center">
+            <fadein.div className="text-black hidden w-auto lg:w-1/2 lg:flex justify-center" from="right">
               <Image
                 src="/images/niksnew.webp"
                 alt="Nick's Hero"
@@ -74,9 +104,9 @@ export default function Home() {
       </section>
       <section id="about" className="bg-gray-200 dark:bg-gray-900">
         <div className="container mx-auto pt-12 px-4 py-10 md:grid grid-cols-2">
-          <fadein.h2 className="col-span-2">
+          <fadein.xh2 className="col-span-2">
             Summary
-          </fadein.h2>
+          </fadein.xh2>
           <div className="mb-10">
             <fadein.h3>About Me</fadein.h3>
             <fadein.p>
@@ -111,26 +141,21 @@ export default function Home() {
         <SkillsSection />
 
       </section>
-      <section className="bg-gray-200 dark:bg-gray-900 py-4">
+      <section id="stats" className="bg-gray-200 dark:bg-gray-900 py-4">
         <div className="container mx-auto m-10 p-4">
           <fadein.h2>
             Stats
           </fadein.h2>
-          <fadein.div>
+          <div>
             <StatsSection />
-          </fadein.div>
+          </div>
         </div>
       </section>
       <section id="projects">
-        <div className="container mx-auto m-10 p-4">
-          <h2>
-            Projects
-          </h2>
-          <p>
-            I have worked with various clients in creating and maintaining their websites. I have also worked with various clients in automating their business processes. I have also worked with various clients in creating and maintaining their E-commerce platforms. I have also worked with various clients in creating and maintaining their blogs and portfolios.
-          </p>
-        </div>
+                <ProjectsSection />
+       
       </section>
+    
     </main>
   );
 }
