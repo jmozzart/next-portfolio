@@ -18,23 +18,6 @@ export default function Header() {
     const isNotHomePage = usePathname() !== '/';
     const [isScrolled, setIsScrolled] = useState(isNotHomePage);
     
- 
- 
-
-
-/*     useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 0;
-            setIsScrolled(isScrolled);
-        };
-
-        document.addEventListener('scroll', handleScroll);
-        return () => {
-            document.removeEventListener('scroll', handleScroll);
-        };
-    }, []); */
-
-
   useEffect(() => {
     if (isHomePage) {
       const handleScroll = () => {

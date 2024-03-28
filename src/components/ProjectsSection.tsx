@@ -8,9 +8,7 @@ export default function ProjectsSection() {
         <h2>
           Projects
         </h2>
-        <p>
-          I have worked with various clients in creating and maintaining their websites. I have also worked with various clients in automating their business processes. I have also worked with various clients in creating and maintaining their E-commerce platforms. I have also worked with various clients in creating and maintaining their blogs and portfolios.
-        </p>
+        
         <div>
         <ProjectsList />
         </div>
