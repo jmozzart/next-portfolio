@@ -64,6 +64,22 @@ const animateOnly = (Component: any) => {
 
   return AnimatedComponent;
 };
+
+
+
+interface HoverProps {
+ className: string;
+ children: React.ReactNode;
+}
+
+
+export function HoverDiv({ className, children }: HoverProps) {
+    return (
+        <div className={className}>
+      {children}
+      </div>
+    )
+}
   
   export const div = onView(motion.div);
   export const h1 = onView(motion.h1);

@@ -1,5 +1,5 @@
 
-import ProjectsList from "@/components/ProjectsList";
+import FeaturedProjects from "@/components/FeaturedProjects";
 
 
 export default function ProjectsSection() {
@@ -10,7 +10,7 @@ export default function ProjectsSection() {
         </h2>
         
         <div>
-        <ProjectsList />
+        <FeaturedProjects />
         </div>
       </div>
     )

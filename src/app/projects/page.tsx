@@ -1,18 +1,22 @@
 
 
-import ProjectsList from "@/components/ProjectsList";
+import ProjectsList from "@/components/FeaturedProjects";
 
 
 export default async function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-    
-      <ProjectsList />
-  
-      </div>
+    <main >
+      <section>
+        <div className="container mx-auto pt-20">
+
+          <ProjectsList />
+
+        </div>
+
+      </section>
+
 
     </main>
   );
