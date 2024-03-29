@@ -170,7 +170,8 @@ export default function Header() {
                 </button>
                 <nav className={`flex flex-col sm:hidden space-y-2
                     absolute right-0 top-16
-                    bg-gray-200/100 shadow-lg
+                    bg-gray-100/100 shadow-lg
+                     w-40 rounded-l-md
                     transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     {menuitems.map(([title, url]) => (
                         <Link

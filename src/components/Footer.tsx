@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer(){
     return (
-    <section id="footer" className="bg-gray-800 text-gray-100">
+    <footer id="footer" className="bg-gray-800 text-gray-100">
         <div className="container mx-auto p-10">
         <div className="flex flex-wrap justify-between">
             <div className="w-full md:w-1/3 mb-8 md:mb-0 ">
@@ -12,7 +12,7 @@ export default function Footer(){
             </div>
             <div className="w-full md:w-1/3 mb-8 md:mb-0">
             <h3 className="text-lg mb-3 text-left md:text-center">Quick Links</h3>
-            <ul className="space-y-2 text-sm md:text-center">
+            <ul className="space-y-4 text-sm md:text-center">
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/projects">Projects</Link></li>
                 <li><Link href="/skills">Skills</Link></li>
@@ -30,6 +30,6 @@ export default function Footer(){
             <p className="text-sm">This portfolio website is created and designed by Cyril Nicko Gaspar.</p>
         </div>
         </div>
-  </section>
+  </footer>
     )
 }

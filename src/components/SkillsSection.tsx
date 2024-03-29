@@ -9,10 +9,19 @@ import { ProgressBar } from "@/components/Charts";
 
 const skills = [
   {
-    "skill_name": "Frontend",
+    "skill_name": "Web Development",
     "skills": [
-      { "skill_name": "HTML", "icon": <Icons.HTML />, "is_hidden": true, "description": "HTML is the standard markup language for documents designed to be displayed in a web browser." },
-      { "skill_name": "CSS", "icon": <Icons.CSS />, "is_hidden": true, "description": "CSS is a style sheet language used for describing the presentation of a document written in HTML." },
+      { "skill_name": "HTML5",
+      "icon": <Icons.HTML />,
+      "is_hidden": true,
+      "description":
+      "HTML5 is a markup language used for structuring and presenting hypertext documents on the World Wide Web. It was the fifth and final major HTML version that is now a retired World Wide Web Consortium recommendation. The current specification is known as the HTML Living Standard." 
+    },
+      {
+        "skill_name": "CSS3",
+        "icon": <Icons.CSS />,
+        "is_hidden": true,
+        "description": "CSS3 stands for Cascading Style Sheet level 3, which is the advanced version of CSS. It is used for structuring, styling, and formatting web pages. Several new features have been added to CSS3 and it is supported by all modern web browsers." },
       {
         "skill_name": "JavaScript",
         "icon": <Icons.JS />,
@@ -52,7 +61,7 @@ const skills = [
       // ... and so on for the rest of the skills
     ]
   },
-  {
+ /*  {
     "skill_name": "Backend",
     "skills": [
       {
@@ -92,7 +101,7 @@ const skills = [
         "description": "Microsoft Azure, commonly referred to as Azure, is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers."
       }
     ]
-  },
+  }, */
   {
     "skill_name": "Automation",
     "skills": [
@@ -107,6 +116,12 @@ const skills = [
         "icon": <Icons.Make />,
         "is_hidden": false,
         "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. It allows you to automate parts of the build process."
+      },
+      {
+        "skill_name": "REST API",
+        "icon": <Icons.RESTAPI />,
+        "is_hidden": true,
+        "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
       },
       {
         "skill_name": "Power Automate",
@@ -172,9 +187,49 @@ const skills = [
         "is_hidden": false,
         "description": "Monday.com is a cloud-based work operating system that powers teams to run processes, projects, and everyday work their way."
       }
-
-
     ]
+  },
+  {
+    "skill_name": "Database and Spreadsheet",
+    "skills": [
+      {
+        "skill_name": "Airtable",
+        "icon": <Icons.Airtable />,
+        "is_hidden": false,
+        "description": "Airtable is a cloud collaboration service headquartered in San Francisco. It was founded in 2012 by Howie Liu, Andrew Ofstad, and Emmett Nicholas. Airtable is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet."
+      },
+      {
+        "skill_name": "Excel",
+        "icon": <Icons.Excel />,
+        "is_hidden": true,
+        "description": "Microsoft Excel is a spreadsheet developed by Microsoft for Windows, macOS, Android, and iOS. It features calculation, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications."
+      },
+      {
+        "skill_name": "Firebase DB",
+        "icon": <Icons.Firebase />,
+        "is_hidden": false,
+        "description": "Firebase is a platform developed by Google for creating mobile and web applications. It provides tools and services to help developers build high-quality apps, grow their user base, and earn more money."
+      },
+      {
+        "skill_name": "Google Sheets",
+        "icon": <Icons.GoogleSheets />,
+        "is_hidden": true,
+        "description": "Google Sheets is a web-based spreadsheet program that is part of Google's office software suite within its Google Drive service."
+      },
+      /* {
+        "skill_name": "MySQL",
+        "icon": <Icons.MySQL />,
+        "is_hidden": true,
+        "description": "MySQL is an open-source relational database management system. Its name is a combination of 'My', the name of co-founder Michael Widenius's daughter, and 'SQL', the abbreviation for Structured Query Language."
+      },*/
+     /*  {
+        "skill_name": "PostgreSQL",
+        "icon": <Icons.PostgreSQL />,
+        "is_hidden": true,
+        "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance."
+      }  */
+    ]
+
   }
 
 ];
@@ -182,7 +237,7 @@ const skills = [
 const hskills = [
   { name: 'Analytical', percentage: 92 },
   { name: 'Grit', percentage: 90 },
-  { name: 'Artistry', percentage: 75 },
+/*   { name: 'Artistry', percentage: 75 }, */
   { name: 'Organization', percentage: 48 },
   { name: 'English', percentage: 69 },
   { name: 'Problem solving', percentage: 95 },
