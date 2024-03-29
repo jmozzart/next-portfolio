@@ -190,7 +190,7 @@ const skills = [
     ]
   },
   {
-    "skill_name": "Database and Spreadsheet",
+    "skill_name": "Database & Spreadsheet",
     "skills": [
       {
         "skill_name": "Airtable",

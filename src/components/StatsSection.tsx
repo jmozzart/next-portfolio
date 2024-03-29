@@ -31,9 +31,9 @@ const aveReviews = filteredPlatforms.reduce((total, platform) => total + (platfo
 
 const StatsSection = () => (
   <>
-    <div className="mx-auto block md:flex flex-wrap justify-center">
+    <div className="mx-auto block md:flex flex-wrap justify-around">
 
-      <fadein.div className="py-3 mx-10">
+      <fadein.div className="mx-auto mb-6">
         <div className="flex justify-center mb-3">
           <svg width={300} height={310}>
             <DonutChart data={projectscount} type="integer" />
@@ -44,7 +44,7 @@ const StatsSection = () => (
         </div>
       </fadein.div>
 
-      <fadein.div className="py-3 mx-10">
+      <fadein.div className="mx-auto mb-6">
         <div className="flex justify-center mb-3">
           <svg width={300} height={310}>
             <DonutChart data={earnings} type="currency" />
@@ -55,7 +55,7 @@ const StatsSection = () => (
         </div>
       </fadein.div>
 
-      <fadein.div className="py-3 mx-10">
+      <fadein.div className="mx-auto mb-6">
         <div className="flex justify-center mb-3">
          
             <svg width={300} height={310} >

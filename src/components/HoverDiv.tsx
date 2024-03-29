@@ -7,7 +7,7 @@ interface HoverProps {
 }
 
 
-export default async function HoverDiv({ className, children }: HoverProps) {
+export default function HoverDiv({ className, children }: HoverProps) {
     return (
         <div className={className}>
       {children}

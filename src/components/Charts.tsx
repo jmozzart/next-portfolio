@@ -103,7 +103,7 @@ export function DonutChart({ data, type }: DonutChartProps) {
                         <circle cx={(index * 33) + 12 + "%"} cy="97%" r="0.7" fill={COLORS[index]}
                         />
 
-                        <text fontSize="2" x={(index * 33) + 15 + "%"} y="98.5%" className="fill-gray-700 dark:fill-gray-200"
+                        <text fontSize="2" x={(index * 33) + 15 + "%"} y="98.5%" className="fill-gray-600 dark:fill-gray-200 font-mono"
                         > {item.name} </text>
                     </g>
                 )
