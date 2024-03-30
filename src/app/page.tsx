@@ -1,6 +1,8 @@
 
 import Image from "next/image";
-import * as Icons from "@/components/Icons";
+import { PhoneIcon, EmailIcon, UWTopRated, UWJSS, ResponsiveIcon, Gear, CRM, AI, Plug, EcomLogo,
+  UpworkIcon, FiverrIcon, LinkedInIcon, GitHubIcon, WebDevIcon
+ } from "@/components/Icons";
 import Link from "next/link";
 import SkillsSection from "@/components/SkillsSection";
 import StatsSection from "@/components/StatsSection";
@@ -15,18 +17,18 @@ import ModalButton from "@/components/ModalButton";
 //const DynamicComponentWithNoSSR = dynamic(
 
 const contacts = [
-  { icon: <Icons.PhoneIcon />, text: '+639158087114' },
-  { icon: <Icons.EmailIcon />, text: 'cyrilnicko@gmail.com' }
+  { icon: <PhoneIcon />, text: '+639158087114' },
+  { icon: <EmailIcon />, text: 'cyrilnicko@gmail.com' }
 ];
 const highlights = [
-  { icon: <Icons.UWTopRated />, text: 'Upwork Top Rated' },
-  { icon: <Icons.UWJSS />, text: '100% Job Success Score in Upwork' },
-  { icon: <Icons.ResponsiveIcon />, text: 'Responsive Web Design' },
-  { icon: <Icons.Gear />, text: 'Automations (Zapier, Make)' },
-  { icon: <Icons.CRM />, text: 'CRM Development (GoHIghLevel, Hubspot, Monday.com, Clickfunnels)' },
-  { icon: <Icons.AI />, text: 'AI Integrations (OpenAI, Mistral, Langchain)' },
-  { icon: <Icons.Plug />, text: 'API Development and Integrations' },
-  { icon: <Icons.EcomLogo />, text: 'Ecommerce Development (Shopify, Woocommerce, Wix, Webflow)' },
+  { icon: <UWTopRated />, text: 'Upwork Top Rated' },
+  { icon: <UWJSS />, text: '100% Job Success Score in Upwork' },
+  { icon: <ResponsiveIcon />, text: 'Responsive Web Design' },
+  { icon: <Gear />, text: 'Automations (Zapier, Make)' },
+  { icon: <CRM />, text: 'CRM Development (GoHIghLevel, Hubspot, Monday.com, Clickfunnels)' },
+  { icon: <AI />, text: 'AI Integrations (OpenAI, Mistral, Langchain)' },
+  { icon: <Plug />, text: 'API Development and Integrations' },
+  { icon: <EcomLogo />, text: 'Ecommerce Development (Shopify, Woocommerce, Wix, Webflow)' },
 ];
 
 export default function Home() {
@@ -56,29 +58,29 @@ export default function Home() {
                   <fadein.xdiv from="left" delay={0.6}>
                     <Link href="https://www.upwork.com/freelancers/~013f1afa3db163b9c1" target="_blank"
                       aria-label="Upwork Profile"
-                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
-                        <Icons.UpworkIcon /></svg>
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
+                        <UpworkIcon /></svg>
                     </Link>
                   </fadein.xdiv>
                   <fadein.xdiv from="left" delay={0.4}>
                     <Link href="https://www.fiverr.com/cynick?public_mode=true" target="_blank"
                       aria-label="Fiverr Profile"
-                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
-                        <Icons.FiverrIcon /></svg>
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
+                        <FiverrIcon /></svg>
                     </Link>
                   </fadein.xdiv>
                   <fadein.xdiv from="left" delay={0.2}>
                     <Link href="https://www.linkedin.com/in/cyrilnicko/" target="_blank"
                       aria-label="LinkedIn Profile"
-                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
-                        <Icons.LinkedInIcon /></svg>
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
+                        <LinkedInIcon /></svg>
                     </Link>
                   </fadein.xdiv>
                   <fadein.xdiv from="left" delay={0}>
                     <Link href="https://www.github.com/jmozzart" target="_blank"
                       aria-label="GitHub Profile"
-                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
-                        <Icons.GitHubIcon /></svg>
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
+                        <GitHubIcon /></svg>
                     </Link>
                   </fadein.xdiv>
 
@@ -88,11 +90,11 @@ export default function Home() {
                   <fadein.xdiv from="left" delay={0.2} className="">
                     <ModalButton buttonClass="primary-btn" buttonLabel="Contact">
                       <div>
-                        <div className="mb-4 font-medium">Contact me on:</div>
+                        <div className="mb-4 font-medium dark:text-gray-100">You can contact me at:</div>
                         {contacts.map((contact, index) => (
                           <div key={index} className="flex flex-row py-2">
                        
-                              <svg className="mr-3 fill-gray-800 w-6 h-6">{contact.icon}</svg>
+                              <svg className="mr-3 fill-gray-800 w-6 h-6 dark:fill-gray-200">{contact.icon}</svg>
                        
                             <span className="text-gray-600 dark:text-gray-100">{contact.text}</span>
                           </div>
@@ -183,17 +185,17 @@ export default function Home() {
 
 
             <ServiceCard
-              icon={<Icons.WebDevIcon />}
+              icon={<WebDevIcon />}
               title="Web Development"
               description="Custom Websites, E-commerce, Landing Pages, Blogs, and more."
             />
             <ServiceCard
-              icon={<Icons.Gear />}
+              icon={<Gear />}
               title="Automations"
               description="Integrate your apps and automate your business processes."
             />
             <ServiceCard
-              icon={<Icons.CRM />}
+              icon={<CRM />}
               title="CRM Development"
               description="Custom CRM solutions for your business."
             />

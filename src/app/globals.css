@@ -65,9 +65,10 @@ p {
 }
 
 .primary-btn {
-  @apply bg-gray-600 border-2 border-gray-600 text-white rounded-sm p-3 font-light w-32 text-center hover:bg-mainaccent-700 hover:border-mainaccent-700
+  @apply bg-gray-600 border-2 border-gray-600 text-white rounded-sm p-3 font-light w-32 text-center hover:bg-mainaccent-700 hover:border-mainaccent-700 transition-colors ease-in-out duration-300
 }
 
 .secondary-btn {
-  @apply border-2 border-gray-500 text-black rounded-sm p-3 font-light w-32 text-center  hover:text-mainaccent-700 hover:border-mainaccent-700 dark:text-gray-300 dark:border-gray-400
+  @apply border-2 border-gray-500 text-black rounded-sm p-3 font-light w-32 text-center  hover:text-mainaccent-700 hover:border-mainaccent-700 dark:text-gray-300 dark:border-gray-400 transition-colors ease-in-out duration-300
 }
+

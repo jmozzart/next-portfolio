@@ -1,5 +1,5 @@
 "use client";
-import * as Icons from "@/components/Icons";
+import { HTML, CSS, JS, ReactIcon, SASS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, PowerAutomate, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets} from "@/components/Icons";
 import React, { useState } from "react";
 import Link from "next/link";
 import Modal from "@/components/Modal";
@@ -12,49 +12,49 @@ const skills = [
     "skill_name": "Web Development",
     "skills": [
       { "skill_name": "HTML5",
-      "icon": <Icons.HTML />,
+      "icon": <HTML />,
       "is_hidden": true,
       "description":
       "HTML5 is a markup language used for structuring and presenting hypertext documents on the World Wide Web. It was the fifth and final major HTML version that is now a retired World Wide Web Consortium recommendation. The current specification is known as the HTML Living Standard." 
     },
       {
         "skill_name": "CSS3",
-        "icon": <Icons.CSS />,
+        "icon": <CSS />,
         "is_hidden": true,
         "description": "CSS3 stands for Cascading Style Sheet level 3, which is the advanced version of CSS. It is used for structuring, styling, and formatting web pages. Several new features have been added to CSS3 and it is supported by all modern web browsers." },
       {
         "skill_name": "JavaScript",
-        "icon": <Icons.JS />,
+        "icon": <JS />,
         "is_hidden": true,
         "description": "JavaScript is a programming language that is primarily used for adding interactivity to web pages on the client side."
       },
       {
         "skill_name": "React",
-        "icon": <Icons.React />,
+        "icon": <ReactIcon />,
         "is_hidden": false,
         "description": "React is a JavaScript library for building user interfaces, primarily for single-page applications. It's used for handling the view layer in web and mobile apps."
       },
       {
         "skill_name": "Sass",
-        "icon": <Icons.SASS />,
+        "icon": <SASS />,
         "is_hidden": true,
         "description": "Sass is a preprocessor scripting language that is interpreted or compiled into CSS. It's a mature, stable, and powerful professional grade CSS extension."
       },
       {
         "skill_name": "TypeScript",
-        "icon": <Icons.TypeScript />,
+        "icon": <TypeScript />,
         "is_hidden": false,
         "description": "TypeScript is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transcompiles to JavaScript."
       },
       {
         "skill_name": "TailwindCSS",
-        "icon": <Icons.TailwindCSS />,
+        "icon": <TailwindCSS />,
         "is_hidden": false,
         "description": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override."
       },
       {
         "skill_name": "Next.js",
-        "icon": <Icons.NextJS />,
+        "icon": <NextJS />,
         "is_hidden": false,
         "description": "Next.JS is an open-source development framework built on top of Node.js enabling React based web applications functionalities such as server-side rendering and generating static websites."
       },
@@ -66,37 +66,37 @@ const skills = [
     "skills": [
       {
         "skill_name": "NodeJS",
-        "icon": <Icons.NodeJS />,
+        "icon": <NodeJS />,
         "is_hidden": false,
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
       },
       {
         "skill_name": "Firebase",
-        "icon": <Icons.Firebase />,
+        "icon": <Firebase />,
         "is_hidden": false,
         "description": "Firebase is a platform developed by Google for creating mobile and web applications. It provides tools and services to help developers build high-quality apps, grow their user base, and earn more money."
       },
       {
         "skill_name": "REST API",
-        "icon": <Icons.RESTAPI />,
+        "icon": <RESTAPI />,
         "is_hidden": true,
         "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
       },
       {
         "skill_name": "Vercel",
-        "icon": <Icons.Vercel />,
+        "icon": <Vercel />,
         "is_hidden": true,
         "description": "Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with your workflow. It enables developers to host websites and web services that deploy instantly, scale automatically, and requires no supervision, all with no configuration."
       },
       {
         "skill_name": "Netlify",
-        "icon": <Icons.Netlify />,
+        "icon": <Netlify />,
         "is_hidden": true,
         "description": "Netlify is a web developer platform that multiplies productivity. By unifying the elements of the modern decoupled web, from local development to advanced edge logic, Netlify enables a 10x faster path to much more performant, secure, and scalable websites and apps."
       },
       {
         "skill_name": "Azure",
-        "icon": <Icons.Azure />,
+        "icon": <Azure />,
         "is_hidden": false,
         "description": "Microsoft Azure, commonly referred to as Azure, is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers."
       }
@@ -107,25 +107,25 @@ const skills = [
     "skills": [
       {
         "skill_name": "Zapier",
-        "icon": <Icons.Zapier />,
+        "icon": <Zapier />,
         "is_hidden": false,
         "description": "Zapier is an online automation tool that connects your favorite apps, such as Gmail, Slack, Mailchimp, and more. You can connect two or more apps to automate repetitive tasks without coding or relying on developers to build the integration."
       },
       {
         "skill_name": "Make.com",
-        "icon": <Icons.Make />,
+        "icon": <Make />,
         "is_hidden": false,
         "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. It allows you to automate parts of the build process."
       },
       {
         "skill_name": "REST API",
-        "icon": <Icons.RESTAPI />,
+        "icon": <RESTAPI />,
         "is_hidden": true,
         "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
       },
       {
         "skill_name": "Power Automate",
-        "icon": <Icons.PowerAutomate />,
+        "icon": <PowerAutomate />,
         "is_hidden": true,
         "description": "Power Automate, formerly known as Microsoft Flow, is a cloud-based service that allows employees to create and automate workflows and tasks across multiple applications and services without help from developers."
       }
@@ -136,25 +136,25 @@ const skills = [
     "skills": [
       {
         "skill_name": "Sanity.io",
-        "icon": <Icons.Sanity />,
+        "icon": <Sanity />,
         "is_hidden": false,
         "description": "Sanity.io is a platform for structured content that comes with an open-source editor that you can customize with React.js."
       },
       {
         "skill_name": "Shopify",
-        "icon": <Icons.Shopify />,
+        "icon": <Shopify />,
         "is_hidden": false,
         "description": "Shopify is a subscription to a software service that offers you to create a website and use their shopping cart solution to sell, ship, and manage your products."
       },
       {
         "skill_name": "Wordpress",
-        "icon": <Icons.Wordpress />,
+        "icon": <Wordpress />,
         "is_hidden": true,
         "description": "WordPress is a free and open-source content management system written in PHP and paired with a MySQL or MariaDB database. Features include a plugin architecture and a template system, referred to within WordPress as Themes."
       },
       {
         "skill_name": "Wix / Velo",
-        "icon": <Icons.Velo />,
+        "icon": <Velo />,
         "is_hidden": false,
         "description": "Wix.com is a cloud-based web development platform that allows users to create HTML5 websites and mobile sites through the use of online drag and drop tools. Velo by Wix is a full-stack development platform that empowers you to rapidly build, manage and deploy professional web apps."
       }
@@ -165,25 +165,25 @@ const skills = [
     "skills": [
       {
         "skill_name": "HubSpot",
-        "icon": <Icons.HubSpot />,
+        "icon": <HubSpot />,
         "is_hidden": false,
         "description": "HubSpot offers a full platform of marketing, sales, customer service, and CRM software — plus the methodology, resources, and support — to help businesses grow better."
       },
       {
         "skill_name": "GoHighLevel",
-        "icon": <Icons.GoHighLevel />,
+        "icon": <GoHighLevel />,
         "is_hidden": false,
         "description": "GoHighLevel is an all-in-one sales and marketing platform that helps businesses manage their sales, marketing, and operations in one place. It includes tools for email marketing, SMS marketing, CRM, and more."
       },
       {
         "skill_name": "ClickFunnels",
-        "icon": <Icons.ClickFunnels />,
+        "icon": <ClickFunnels />,
         "is_hidden": true,
         "description": "ClickFunnels is a website and sales funnel builder for entrepreneurs. ClickFunnels allows you to build landing pages, sales pages, and complete sales funnels."
       },
       {
         "skill_name": "Monday.com",
-        "icon": <Icons.Monday />,
+        "icon": <Monday />,
         "is_hidden": false,
         "description": "Monday.com is a cloud-based work operating system that powers teams to run processes, projects, and everyday work their way."
       }
@@ -194,37 +194,37 @@ const skills = [
     "skills": [
       {
         "skill_name": "Airtable",
-        "icon": <Icons.Airtable />,
+        "icon": <Airtable />,
         "is_hidden": false,
         "description": "Airtable is a cloud collaboration service headquartered in San Francisco. It was founded in 2012 by Howie Liu, Andrew Ofstad, and Emmett Nicholas. Airtable is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet."
       },
       {
         "skill_name": "Excel",
-        "icon": <Icons.Excel />,
+        "icon": <Excel />,
         "is_hidden": true,
         "description": "Microsoft Excel is a spreadsheet developed by Microsoft for Windows, macOS, Android, and iOS. It features calculation, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications."
       },
       {
         "skill_name": "Firebase DB",
-        "icon": <Icons.Firebase />,
+        "icon": <Firebase />,
         "is_hidden": false,
         "description": "Firebase is a platform developed by Google for creating mobile and web applications. It provides tools and services to help developers build high-quality apps, grow their user base, and earn more money."
       },
       {
         "skill_name": "Google Sheets",
-        "icon": <Icons.GoogleSheets />,
+        "icon": <GoogleSheets />,
         "is_hidden": true,
         "description": "Google Sheets is a web-based spreadsheet program that is part of Google's office software suite within its Google Drive service."
       },
       /* {
         "skill_name": "MySQL",
-        "icon": <Icons.MySQL />,
+        "icon": <MySQL />,
         "is_hidden": true,
         "description": "MySQL is an open-source relational database management system. Its name is a combination of 'My', the name of co-founder Michael Widenius's daughter, and 'SQL', the abbreviation for Structured Query Language."
       },*/
      /*  {
         "skill_name": "PostgreSQL",
-        "icon": <Icons.PostgreSQL />,
+        "icon": <PostgreSQL />,
         "is_hidden": true,
         "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance."
       }  */

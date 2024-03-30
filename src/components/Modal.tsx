@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import * as fadein from '@/components/AnimatedBlock';
+import {motion} from 'framer-motion';
 
 interface ModalProps {
     isOpen: boolean;
@@ -13,7 +14,11 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
     }
 
     return (
-        <div className="fixed z-10 inset-0 overflow-y-auto">
+        <motion.div className="fixed z-10 inset-0 overflow-y-auto transition-all"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
                 <div className="fixed inset-0 transition-opacity" aria-hidden="true">
                     <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -30,7 +35,7 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

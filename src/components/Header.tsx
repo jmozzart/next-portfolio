@@ -20,8 +20,10 @@ export default function Header() {
 
     useEffect(() => {
         setIsHomePage(router === '/');
-      }, [router]);
+      }, [isHomePage, router]); // isHomePage is added later
     
+
+      
   useEffect(() => {
     if (isHomePage) {
       const handleScroll = () => {
@@ -37,6 +39,17 @@ export default function Header() {
     }
   }, [isHomePage]);
 
+/* useEffect(() => {
+    const handlePopState = () => {
+        console.log('User navigated back or forward');
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+        window.removeEventListener('popstate', handlePopState);
+    };
+}, []);
+ */
 
 
 
@@ -142,9 +155,10 @@ export default function Header() {
                             href="#"
                             key={url}
                             aria-label={`Menu Button Link for ${title}`}
-                            className="px-1.5 lg:px-3 py-2 text-center
-                        hover:text-cyan-800 text-xs lg:text-base
-                        hover:underline decoration-8 decoration-mainaccent-700 underline-offset-8"
+                            className={`px-1.5 lg:px-3 py-2 text-center ${isScrolled ? 'hover:text-cyan-500' : 'hover:text-gray-900'}
+                         text-xs lg:text-base
+                         transition-all duration-500 ease-in-out
+                        `}
                             // @ts-ignore
                             onClick={(e) => handleClick(e, url)}
                         >
