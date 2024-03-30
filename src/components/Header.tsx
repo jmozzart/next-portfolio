@@ -14,16 +14,19 @@ const menuitems = [
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
-    const isHomePage = usePathname() === '/';
-    const isNotHomePage = usePathname() !== '/';
-    const [isScrolled, setIsScrolled] = useState(isNotHomePage);
+    const router = usePathname();
+    const [isHomePage, setIsHomePage] = useState(router === '/');
+    const [isScrolled, setIsScrolled] = useState((!isHomePage));
+
+    useEffect(() => {
+        setIsHomePage(router === '/');
+      }, [router]);
     
   useEffect(() => {
     if (isHomePage) {
       const handleScroll = () => {
         const isScrolled = window.scrollY > 0;
-/*         const element = document.querySelector('#projects');
-        console.log(element); */
+
         setIsScrolled(isScrolled);
       };
 

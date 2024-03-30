@@ -87,7 +87,17 @@ export default function Home() {
                 <div className="py-2 flex flex-row space-x-4 mt-3">
                   <fadein.xdiv from="left" delay={0.2} className="">
                     <ModalButton buttonClass="primary-btn" buttonLabel="Contact">
-                      <div>Contact Me</div>
+                      <div>
+                        <div className="mb-4 font-medium">Contact me on:</div>
+                        {contacts.map((contact, index) => (
+                          <div key={index} className="flex flex-row py-2">
+                       
+                              <svg className="mr-3 fill-gray-800 w-6 h-6">{contact.icon}</svg>
+                       
+                            <span className="text-gray-600 dark:text-gray-100">{contact.text}</span>
+                          </div>
+                        ))}
+                      </div>
                     </ModalButton>
                   </fadein.xdiv>
                   <fadein.xdiv from="left" className="hidden md:block">
