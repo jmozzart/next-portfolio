@@ -51,11 +51,12 @@ const animateOnly = (Component: any) => {
           translateY: 0,
           translateX: 0,
           opacity: 1 }}
-        viewport={{ once: true }}
+
         transition={{
           duration: speed || 0.5,
           delay: delay || 0, 
         }}
+
       >
         {children}
       </Component>

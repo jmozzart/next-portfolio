@@ -9,6 +9,8 @@ import React from 'react';
 import * as fadein from '@/components/AnimatedBlock';
 //import dynamic from "next/dynamic";
 import ServiceCard from "@/components/ServiceCard";
+import SectionButton from "@/components/SectionButton";
+import ModalButton from "@/components/ModalButton";
 
 //const DynamicComponentWithNoSSR = dynamic(
 
@@ -49,51 +51,47 @@ export default function Home() {
               </p>
 
               <div className="contact-info mt-4 text-gray-500 text-sm md:text-base items-center">
-                {/* {contacts.map((contact, index) => (
-                  <div key={index} className="flex flex-row py-2">
-                    <svg className="mr-3">{contact.icon}</svg>
-                    <span className="text-gray-600 dark:text-gray-100">{contact.text}</span>
-                  </div>
-                ))} */}
 
                 <div className="py-2 flex flex-row space-x-4 mt-4">
                   <fadein.xdiv from="left" delay={0.6}>
                     <Link href="https://www.upwork.com/freelancers/~013f1afa3db163b9c1" target="_blank"
                       aria-label="Upwork Profile"
-                    >
-                      <Icons.UpworkIcon />
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
+                        <Icons.UpworkIcon /></svg>
                     </Link>
                   </fadein.xdiv>
                   <fadein.xdiv from="left" delay={0.4}>
                     <Link href="https://www.fiverr.com/cynick?public_mode=true" target="_blank"
                       aria-label="Fiverr Profile"
-                    >
-                      <Icons.FiverrIcon />
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
+                        <Icons.FiverrIcon /></svg>
                     </Link>
                   </fadein.xdiv>
                   <fadein.xdiv from="left" delay={0.2}>
                     <Link href="https://www.linkedin.com/in/cyrilnicko/" target="_blank"
                       aria-label="LinkedIn Profile"
-                    >
-                      <Icons.LinkedInIcon />
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
+                        <Icons.LinkedInIcon /></svg>
                     </Link>
                   </fadein.xdiv>
                   <fadein.xdiv from="left" delay={0}>
                     <Link href="https://www.github.com/jmozzart" target="_blank"
                       aria-label="GitHub Profile"
-                    >
-                      <Icons.GitHubIcon />
+                    ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400">
+                        <Icons.GitHubIcon /></svg>
                     </Link>
                   </fadein.xdiv>
 
 
                 </div>
-                <div className="py-2 flex flex-row space-x-4 mt-4">
-                  <fadein.xdiv from="left" delay={0.2} className="bg-gray-600 border-2 border-gray-600 text-white rounded-sm p-3 font-light w-32 text-center">
-                    <Link href="/contact" className=" whitespace-nowrap">Contact Me</Link>
+                <div className="py-2 flex flex-row space-x-4 mt-3">
+                  <fadein.xdiv from="left" delay={0.2} className="">
+                    <ModalButton buttonClass="primary-btn" buttonLabel="Contact">
+                      <div>Contact Me</div>
+                    </ModalButton>
                   </fadein.xdiv>
-                  <fadein.xdiv from="left"  className="hidden md:block border-2 border-gray-500 text-black rounded-sm p-3 font-light w-32 text-center">
-                    <Link href="/projects" className=" whitespace-nowrap">Portfolio</Link>
+                  <fadein.xdiv from="left" className="hidden md:block">
+                    <SectionButton url="#projects" text="Portfolio" className="secondary-btn" />
                   </fadein.xdiv>
                 </div>
               </div>
@@ -133,7 +131,7 @@ export default function Home() {
               {highlights.map((highlight, index) => (
                 <fadein.div key={index} className="flex flex-row py-3">
                   <span className="pr-3">
-                    <svg width={33} height={33} className="fill-gray-700">
+                    <svg width={33} height={33} className="fill-gray-700 dark:fill-gray-400">
                       {highlight.icon}
                     </svg>
                   </span>
@@ -165,33 +163,33 @@ export default function Home() {
         <ProjectsSection />
 
       </section>
-      <section id="services" className="bg-gray-200 py-12">
+      <section id="services" className="bg-gray-200 py-12 dark:bg-gray-900">
 
         <div className="container mx-auto p-4">
           <fadein.h2 className="mb-0">
             Services
           </fadein.h2>
           <div className="flex flex-wrap">
-              
-     
-                  <ServiceCard
-                    icon={<Icons.WebDevIcon />}
-                    title="Web Development"
-                    description="Custom Websites, E-commerce, Landing Pages, Blogs, and more."
-                  />
-                  <ServiceCard
-                    icon={<Icons.Gear />}
-                    title="Automations"
-                    description="Integrate your apps and automate your business processes."
-                  />
-                  <ServiceCard
-                    icon={<Icons.CRM />}
-                    title="CRM Development"
-                    description="Custom CRM solutions for your business."
-                  />
 
-            
-          
+
+            <ServiceCard
+              icon={<Icons.WebDevIcon />}
+              title="Web Development"
+              description="Custom Websites, E-commerce, Landing Pages, Blogs, and more."
+            />
+            <ServiceCard
+              icon={<Icons.Gear />}
+              title="Automations"
+              description="Integrate your apps and automate your business processes."
+            />
+            <ServiceCard
+              icon={<Icons.CRM />}
+              title="CRM Development"
+              description="Custom CRM solutions for your business."
+            />
+
+
+
           </div>
         </div>
       </section>

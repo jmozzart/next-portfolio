@@ -307,11 +307,11 @@ export default function SkillsSection() {
         </React.Fragment>
       ))}
       <fadein.div className="flex flex-row justify-center">
-        <button className="bg-gray-600 hover:bg-mainaccent-700 text-white p-2 m-2 rounded-md">
-          <Link href="/skills">
+        
+          <Link href="/skills" className="primary-btn whitespace-nowrap">
             View All Skills
           </Link>
-        </button>
+        
       </fadein.div>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
