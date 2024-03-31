@@ -7,7 +7,7 @@ import client from "@/utils/sanityClient";
 import {Mdiv} from "@/components/AnimatedBlock";
 import urlFor from "@/utils/imgBuilder";
 
-const query = `*[_type == "projects"][featured]`
+const query = `*[_type == "projects"]`
 
 
 
@@ -23,10 +23,10 @@ export default async function FeaturedProjects() {
                     {projects.map((project) => (
 
                         <div key={project._id} className="m-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 max-w-60 flex flex-col justify-start">
-                            <Link href={`/projects/${project?.slug.current}`}>
+                            <Link href={`/projects/${project?.slug?.current}`}>
                                 
                                     <Image
-                                        src={urlFor(project.image.asset).url()}
+                                        src={urlFor(project?.image?.asset).url()}
                                         alt={project.name}
                                         width={320}
                                         height={320}
