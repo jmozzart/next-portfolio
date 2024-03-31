@@ -8,7 +8,7 @@ import SkillsSection from "@/components/SkillsSection";
 import StatsSection from "@/components/StatsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import React from 'react';
-import * as fadein from '@/components/AnimatedBlock';
+import {Mdiv, Xdiv, Mh2, Mh3, Xh2, Mp} from '@/components/AnimatedBlock';
 //import dynamic from "next/dynamic";
 import ServiceCard from "@/components/ServiceCard";
 import SectionButton from "@/components/SectionButton";
@@ -55,39 +55,39 @@ export default function Home() {
               <div className="contact-info mt-4 text-gray-500 text-sm md:text-base items-center">
 
                 <div className="py-2 flex flex-row space-x-4 mt-4">
-                  <fadein.xdiv from="left" delay={0.6}>
+                  <Xdiv from="left" delay={0.6}>
                     <Link href="https://www.upwork.com/freelancers/~013f1afa3db163b9c1" target="_blank"
                       aria-label="Upwork Profile"
                     ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
                         <UpworkIcon /></svg>
                     </Link>
-                  </fadein.xdiv>
-                  <fadein.xdiv from="left" delay={0.4}>
+                  </Xdiv>
+                  <Xdiv from="left" delay={0.4}>
                     <Link href="https://www.fiverr.com/cynick?public_mode=true" target="_blank"
                       aria-label="Fiverr Profile"
                     ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
                         <FiverrIcon /></svg>
                     </Link>
-                  </fadein.xdiv>
-                  <fadein.xdiv from="left" delay={0.2}>
+                  </Xdiv>
+                  <Xdiv from="left" delay={0.2}>
                     <Link href="https://www.linkedin.com/in/cyrilnicko/" target="_blank"
                       aria-label="LinkedIn Profile"
                     ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
                         <LinkedInIcon /></svg>
                     </Link>
-                  </fadein.xdiv>
-                  <fadein.xdiv from="left" delay={0}>
+                  </Xdiv>
+                  <Xdiv from="left" delay={0}>
                     <Link href="https://www.github.com/jmozzart" target="_blank"
                       aria-label="GitHub Profile"
                     ><svg className="fill-gray-700 hover:fill-mainaccent-700 w-6 h-6 dark:fill-gray-400 transition-colors ease-in-out duration-500">
                         <GitHubIcon /></svg>
                     </Link>
-                  </fadein.xdiv>
+                  </Xdiv>
 
 
                 </div>
                 <div className="py-2 flex flex-row space-x-4 mt-3">
-                  <fadein.xdiv from="left" delay={0.2} className="">
+                  <Xdiv from="left" delay={0.2} className="">
                     <ModalButton buttonClass="primary-btn" buttonLabel="Contact">
                       <div>
                         <div className="mb-4 font-medium dark:text-gray-100">You can contact me at:</div>
@@ -101,15 +101,15 @@ export default function Home() {
                         ))}
                       </div>
                     </ModalButton>
-                  </fadein.xdiv>
-                  <fadein.xdiv from="left" className="hidden md:block">
+                  </Xdiv>
+                  <Xdiv from="left" className="hidden md:block">
                     <SectionButton url="#projects" text="Portfolio" className="secondary-btn" />
-                  </fadein.xdiv>
+                  </Xdiv>
                 </div>
               </div>
 
             </div>
-            <fadein.div className="text-black hidden w-auto lg:w-1/2 lg:flex justify-center" from="right">
+            <Mdiv className="text-black hidden w-auto lg:w-1/2 lg:flex justify-center" from="right">
               <Image
                 src="/images/niksnew.webp"
                 alt="Nick's Hero"
@@ -117,38 +117,38 @@ export default function Home() {
                 width={502}
                 height={480}
               />
-            </fadein.div>
+            </Mdiv>
 
           </div>
         </div>
       </section>
       <section id="about" className="bg-gray-200 dark:bg-gray-900">
         <div className="container mx-auto pt-12 px-4 py-10 md:grid grid-cols-2">
-          <fadein.xh2 className="col-span-2">
+          <Xh2 className="col-span-2">
             Summary
-          </fadein.xh2>
+          </Xh2>
           <div className="mb-10">
-            <fadein.h3>About Me</fadein.h3>
-            <fadein.p>
+            <Mh3>About Me</Mh3>
+            <Mp>
               I specialize in web development, particularly focusing on E-commerce platforms such as Shopify, Woocommerce, Bigcommerce, and more. Proficient in Wordpress, Wix, and Webflow, I am dedicated to creating websites using cutting-edge methods to ensure the best user experience while keeping costs manageable. Whether it is upgrading your website to modern technologies or incorporating specific features, I am committed to enhancing your online presence.
-            </fadein.p>
-            <fadein.p>
+            </Mp>
+            <Mp>
               Moreover, I excel in streamlining business operations by leveraging modern tools and scripting expertise, helping businesses automate their processes efficiently.
-            </fadein.p>
+            </Mp>
           </div>
           <div className="md:px-12">
-            <fadein.h3>Highlights </fadein.h3>
+            <Mh3>Highlights </Mh3>
 
             <div className="highlights-list items-center text-sm md:text-base">
               {highlights.map((highlight, index) => (
-                <fadein.div key={index} className="flex flex-row py-3">
+                <Mdiv key={index} className="flex flex-row py-3">
                   <span className="pr-3">
                     <svg width={33} height={33} className="fill-gray-700 dark:fill-gray-400">
                       {highlight.icon}
                     </svg>
                   </span>
                   {highlight.text}
-                </fadein.div>
+                </Mdiv>
               ))}
             </div>
 
@@ -163,9 +163,9 @@ export default function Home() {
       </section>
       <section id="stats" className="bg-gray-200 dark:bg-gray-900 py-4">
         <div className="container mx-auto m-10 p-4">
-          <fadein.h2>
+          <Mh2>
             Stats
-          </fadein.h2>
+          </Mh2>
           <div>
             <StatsSection />
           </div>
@@ -178,9 +178,9 @@ export default function Home() {
       <section id="services" className="bg-gray-200 py-12 dark:bg-gray-900">
 
         <div className="container mx-auto p-4">
-          <fadein.h2 className="mb-0">
+          <Mh2 className="mb-0">
             Services
-          </fadein.h2>
+          </Mh2>
           <div className="flex flex-wrap">
 
 
