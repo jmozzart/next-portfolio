@@ -32,8 +32,8 @@ export default async function FeaturedProjects() {
                                     <Image
                                         src={urlFor(project.image.asset).url()}
                                         alt={project.name}
-                                        width={320}
-                                        height={320}
+                                        width={296}
+                                        height={296}
                                         className="rounded-lg border-2 border-mainaccent-700 mb-2"
                                         quality={50}
                                     />
