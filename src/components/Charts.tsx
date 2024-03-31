@@ -72,9 +72,9 @@ export function DonutChart({ data, type }: DonutChartProps) {
     }).sort((a, b) => b.value - a.value);
 
     return (
-        <svg viewBox="0 0 42 44" className="block fill-gray-500">
+        <svg viewBox="0 0 42 44" >
 
-            <circle cx="21" cy="21" r="15.91549430918954" stroke="#d2d3d4" strokeWidth="5" fill="transparent" />
+            <circle cx="21" cy="21" r="15.91549430918954" className="dark:stroke-gray-800 stroke-gray-300" strokeWidth="5" fill="transparent" />
 
             {percentage.map((item: any, index: number) => {
                 const runningTotal = percentage.slice(0, index).reduce((acc: number, curr: any) => acc + curr.percentage, 0);

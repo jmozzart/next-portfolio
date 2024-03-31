@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SanityDocument } from "next-sanity";
 import client from "@/utils/sanityClient";
-import * as fadein from "@/components/AnimatedBlock";
+import {Mdiv} from "@/components/AnimatedBlock";
 import urlFor from "@/utils/imgBuilder";
 
 
@@ -23,7 +23,7 @@ export default async function FeaturedProjects() {
     return (
         <>
             {projects.length > 0 && (
-                <fadein.div className="flex flex-wrap justify-center">
+                <Mdiv className="flex flex-wrap justify-center">
                     {projects.map((project) => (
 
                         <div key={project._id} className="m-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 max-w-60 flex flex-col justify-start">
@@ -44,7 +44,7 @@ export default async function FeaturedProjects() {
                             </Link>
                         </div>
                     ))}
-                </fadein.div>
+                </Mdiv>
             )}
         </>
 

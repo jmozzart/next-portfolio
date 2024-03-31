@@ -3,8 +3,9 @@ import { HTML, CSS, JS, ReactIcon, SASS, TypeScript, TailwindCSS, NextJS, Fireba
 import React, { useState } from "react";
 import Link from "next/link";
 import Modal from "@/components/Modal";
-import * as fadein from "@/components/AnimatedBlock";
+import {Mdiv, Mh2, Mh3} from "@/components/AnimatedBlock";
 import { ProgressBar } from "@/components/Charts";
+import SkillIconCard from "@/components/SkillIconCard";
 
 
 const skills = [
@@ -219,7 +220,7 @@ const skills = [
       /* {
         "skill_name": "MySQL",
         "icon": <MySQL />,
-        "is_hidden": true,
+        "is_hidden": true,cn n                                                        c 
         "description": "MySQL is an open-source relational database management system. Its name is a combination of 'My', the name of co-founder Michael Widenius's daughter, and 'SQL', the abbreviation for Structured Query Language."
       },*/
      /*  {
@@ -244,26 +245,6 @@ const hskills = [
   { name: 'Attention to detail', percentage: 85 },
 ];
 
-interface SkillProps {
-  icon: JSX.Element;
-  name: string;
-  isHidden: boolean;
-  viewMore: () => void;
-}
-
-const Skill = ({ icon, name, isHidden, viewMore }: SkillProps) => (
-  <div className={`${isHidden ? "hidden md:flex" : "flex"}
-        flex-col mb-10 px-3 items-center cursor-pointer`}
-    onClick={viewMore}
-  >
-    <div>
-      <svg width={70} height={70} className=" fill-gray-700 dark:fill-gray-300">
-        {icon}
-      </svg>
-    </div>
-    <p className="text-center font-semibold  text-gray-700 dark:text-gray-100">{name}</p>
-  </div>
-);
 
 export default function SkillsSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -271,28 +252,28 @@ export default function SkillsSection() {
   return (
     <div className="container mx-auto m-10 p-4">
 
-      <fadein.h2 >
+      <Mh2 >
         My Skills
-      </fadein.h2>
-      {/*         <fadein.p className="mb-10 hidden md:block">
+      </Mh2>
+      {/*         <Mp className="mb-10 hidden md:block">
           My skills are listed below. Click on the icons to view more details about the corresponding skill. To view all my skills, you may click the button in the bottommost part of this section.
-        </fadein.p> */}
+        </Mp> */}
       <div className="mb-10">
 
         {hskills.map((skill) => (
-          <fadein.div key={skill.name} className="flex mb-4">
+          <Mdiv key={skill.name} className="flex mb-4">
             <div className="text-sm md:text-base font-light md:font-medium dark:text-white w-56 text-right mr-3">{skill.name}</div>
             <ProgressBar percentage={skill.percentage} />
-          </fadein.div>
+          </Mdiv>
         ))}
 
       </div>
       {skills.map((skillCategory, index) => (
         <React.Fragment key={index}>
-          <fadein.h3>{skillCategory.skill_name}</fadein.h3>
-          <fadein.div className="skills-block flex flex-wrap justify-around leading-10">
+          <Mh3>{skillCategory.skill_name}</Mh3>
+          <Mdiv className="skills-block flex flex-wrap justify-around leading-10">
             {skillCategory.skills.map((skill, skillIndex) =>
-              <Skill
+              <SkillIconCard
                 key={skillIndex}
                 icon={skill.icon}
                 name={skill.skill_name}
@@ -303,16 +284,16 @@ export default function SkillsSection() {
                 }}
               />
             )}
-          </fadein.div>
+          </Mdiv>
         </React.Fragment>
       ))}
-      <fadein.div className="flex flex-row justify-center">
+      <Mdiv className="flex flex-row justify-center">
         
           <Link href="/skills" className="primary-btn whitespace-nowrap">
             View All Skills
           </Link>
         
-      </fadein.div>
+      </Mdiv>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div>

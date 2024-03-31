@@ -58,10 +58,10 @@ p {
 
 
 .skills-block>div:hover svg {
-  @apply fill-mainaccent-700
+  @apply fill-mainaccent-700 transition-colors ease-in-out duration-100
 }
 .skills-block>div:hover p {
-  @apply text-mainaccent-700
+  @apply text-mainaccent-700 transition-colors ease-in-out duration-300
 }
 
 .primary-btn {
