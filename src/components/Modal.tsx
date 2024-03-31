@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from 'react';
-import * as fadein from '@/components/AnimatedBlock';
 import {motion} from 'framer-motion';
 
 interface ModalProps {

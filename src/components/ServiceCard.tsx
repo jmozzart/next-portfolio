@@ -1,4 +1,4 @@
-import * as fadein from "@/components/AnimatedBlock";
+import {Mdiv} from "@/components/AnimatedBlock";
 import Link from "next/link";
 
 
@@ -12,7 +12,7 @@ type ServiceCardProps = {
 export default function ServiceCard({ icon, title, description }: ServiceCardProps) {
     const slugifiedTitle = title.toLowerCase().replace(" ", "-");
     return (
-      <fadein.div className="w-96 flex flex-col mx-auto">
+      <Mdiv className="w-96 flex flex-col mx-auto">
         <div className="h-28 relative flex justify-center w-full top-12">
           <span className="relative rounded-full bg-gray-800 dark:bg-mainaccent-700 w-28 h-28">
             <svg className="fill-white dark:fill-black w-28 h-28 scale-50">{icon}</svg>
@@ -26,6 +26,6 @@ export default function ServiceCard({ icon, title, description }: ServiceCardPro
             <Link href={`/services/${slugifiedTitle}`}
             className="bg-mainaccent-700 text-white rounded-lg p-2 dark:text-gray-900 dark:font-medium">Learn More</Link>
         </div>
-      </fadein.div>
+      </Mdiv>
     );
   }

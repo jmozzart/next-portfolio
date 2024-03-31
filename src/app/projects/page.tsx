@@ -1,6 +1,6 @@
 
 
-import ProjectsList from "@/components/FeaturedProjects";
+import ProjectsList from "@/components/ProjectsList";
 
 
 export default async function Home() {

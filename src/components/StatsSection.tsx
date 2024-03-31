@@ -1,7 +1,7 @@
 "use client"
 
 import { DonutChart, StarRating } from '@/components/Charts';
-import * as fadein from '@/components/AnimatedBlock';
+import {Mdiv} from '@/components/AnimatedBlock';
 
 const platforms = [
   {
@@ -33,7 +33,7 @@ const StatsSection = () => (
   <>
     <div className="mx-auto block md:flex flex-wrap justify-around">
 
-      <fadein.div className="mx-auto mb-6">
+      <Mdiv className="mx-auto mb-6">
         <div className="flex justify-center mb-3">
           <svg width={300} height={310}>
             <DonutChart data={projectscount} type="integer" />
@@ -42,9 +42,9 @@ const StatsSection = () => (
         <div className="text-center block font-semibold text-gray-700 dark:text-gray-100">
           Projects Completed
         </div>
-      </fadein.div>
+      </Mdiv>
 
-      <fadein.div className="mx-auto mb-6">
+      <Mdiv className="mx-auto mb-6">
         <div className="flex justify-center mb-3">
           <svg width={300} height={310}>
             <DonutChart data={earnings} type="currency" />
@@ -53,9 +53,9 @@ const StatsSection = () => (
         <div className="text-center block font-semibold text-gray-700 dark:text-gray-100">
           Earnings Milestone
         </div>
-      </fadein.div>
+      </Mdiv>
 
-      <fadein.div className="mx-auto mb-6">
+      <Mdiv className="mx-auto mb-6">
         <div className="flex justify-center mb-3">
          
             <svg width={300} height={310} >
@@ -65,7 +65,7 @@ const StatsSection = () => (
         <div className="text-center block font-semibold text-gray-700 dark:text-gray-100">
           Average Client Ratings
         </div>
-      </fadein.div>
+      </Mdiv>
 
       
     </div>

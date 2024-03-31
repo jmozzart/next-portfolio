@@ -1,5 +1,6 @@
 
 import FeaturedProjects from "@/components/FeaturedProjects";
+import Link from "next/link";
 
 
 export default function ProjectsSection() {
@@ -11,6 +12,9 @@ export default function ProjectsSection() {
         
         <div>
         <FeaturedProjects />
+        </div>
+        <div className="text-center my-8">
+          <Link href="/projects" className="primary-btn">View All Projects</Link>
         </div>
       </div>
     )

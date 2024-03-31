@@ -7,7 +7,7 @@ import client from "@/utils/sanityClient";
 import {Mdiv} from "@/components/AnimatedBlock";
 import urlFor from "@/utils/imgBuilder";
 
-const query = `*[_type == "projects"]`
+const query = `*[_type == "projects"][featured]`
 
 
 
