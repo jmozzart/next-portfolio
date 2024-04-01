@@ -5,6 +5,7 @@ export default function ServicesSection() {
 
   return (
     <main>
+      <section className="h-16 splitbg"></section>
       <section className="">
     <div className="container mx-auto m-10 p-4 flex items-center justify-center h-screen">
       <div className="text-center">

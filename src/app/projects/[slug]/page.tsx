@@ -32,28 +32,29 @@ export default async function EventPage({
 
 
   return (
-<main>
-        <section className="pt-20">
-            <div className="container mx-auto p-4">
-            <Link href="/projects">Back</Link>
-                <div className="flex justify-between">
+    <main>
+      <section className="h-16 splitbg"></section>
+      <section className="pt-20">
+        <div className="container mx-auto p-4">
+          <Link href="/projects">Back</Link>
+          <div className="flex justify-between">
 
-            
+
             <h2>{name}</h2>
             <div className="w-60 h-60 relative">
-            <Image src={urlFor(image.asset).url()}
-            alt={name}
-            fill={true}
-            
-            className="rounded-lg border-2 border-mainaccent-700 mb-2 w-7"
-            quality={50} />
-</div>
+              <Image src={urlFor(image.asset).url()}
+                alt={name}
+                fill={true}
+
+                className="rounded-lg border-2 border-mainaccent-700 mb-2 w-7"
+                quality={50} />
+            </div>
             {/* <PortableText blocks={longDescription} /> */}
-            </div>
-            </div>
-        </section>
-     
-        </main>
-      
-    );
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  );
 }

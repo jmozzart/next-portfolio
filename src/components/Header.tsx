@@ -15,17 +15,17 @@ const menuitems = [
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const router = usePathname();
-    const [isHomePage, setIsHomePage] = useState(router === '/');
-    const [isScrolled, setIsScrolled] = useState((!isHomePage));
+//    const [isHomePage, setIsHomePage] = useState(router === '/');
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
+  /*   useEffect(() => {
         setIsHomePage(router === '/');
       }, [isHomePage, router]); // isHomePage is added later
     
 
       
-  useEffect(() => {
-    if (isHomePage) {
+   */useEffect(() => {
+
       const handleScroll = () => {
         const isScrolled = window.scrollY > 0;
 
@@ -36,8 +36,8 @@ export default function Header() {
       return () => {
         document.removeEventListener('scroll', handleScroll);
       };
-    }
-  }, [isHomePage]);
+
+  }, []);
 
 /* useEffect(() => {
     const handlePopState = () => {
@@ -145,7 +145,6 @@ export default function Header() {
                         </g>
                     </svg>
                 </Link>
-                <div>{isHomePage}</div>
                 <nav className={`hidden sm:flex justify-center font-medium pt-1 text-gray-800 dark:text-gray-100
                 transition-colors duration-300 ${isScrolled ? '' : ' lg:text-gray-200'}`
                 }>
@@ -157,7 +156,7 @@ export default function Header() {
                             aria-label={`Menu Button Link for ${title}`}
                             className={`px-1.5 lg:px-3 py-2 text-center ${isScrolled ? 'hover:text-cyan-500' : 'hover:text-gray-900'}
                          text-xs lg:text-base
-                         transition-all duration-500 ease-in-out
+                         transition-colors duration-300 ease-in-out
                         `}
                             // @ts-ignore
                             onClick={(e) => handleClick(e, url)}
