@@ -98,11 +98,12 @@ const Carousel = ({ images }: CarouselProps) => {
             fill
             quality={50}
             alt="carousel image"
+            loading={currentIndex === 0 ? "eager" : "lazy"}
           />
         </motion.div>
 
       </AnimatePresence>
-      <div className="flex justify-between">
+      {images && images.length > 1 && <div className="flex justify-between">
         <div className="text-gray-200 absolute top-0 bottom-0 h-6 w-6 rounded-full px-1.5 py-1 mx-auto my-32 lg:my-48 bg-mainaccent-700" onClick={handlePrevious}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +122,7 @@ const Carousel = ({ images }: CarouselProps) => {
             <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
           </svg>
         </div>
-      </div>
+      </div>}
       {/*    <div className="indicator">
         {images.map((_, index) => (
           <div

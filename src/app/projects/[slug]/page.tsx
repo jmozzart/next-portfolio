@@ -39,6 +39,10 @@ export default async function EventPage({
       return urlFor(item.asset).url()
     });
   }
+  else
+  {
+    mappedImages = [urlFor(image.asset).url()];
+  }
 
   return (
     <main>
@@ -46,24 +50,14 @@ export default async function EventPage({
       <section className="">
         <div className="container mx-auto p-4">
           <div className="w-full pb-8 text-right">
-            <BackButton buttonText="Go Back" className=" text-mainaccent-700 whitespace-nowrap" />
+            <BackButton buttonText="Go Back" className=" text-gray-200 py-1 px-3 bg-mainaccent-700 whitespace-nowrap" />
           </div>
           <div className="block lg:flex">
             <div>
 
-              {imageGallery && imageGallery.length > 0 ?
-
-                <Carousel images={mappedImages} /> :
-                <div className="relative aspect-square min-w-64 w-96 max-w-96">
-                  <Image src={urlFor(image.asset).url()}
-                    alt={name}
-                    fill={true}
-
-                    className="rounded-lg border-2 border-mainaccent-700 mb-2 w-7"
-                    quality={50} />
-                </div>
-
-              }
+            
+                <Carousel images={mappedImages} /> 
+   
 
             </div>
 
