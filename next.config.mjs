@@ -14,6 +14,12 @@ const bundleAnalyzer = withBundleAnalyzer({
         hostname: 'cdn.sanity.io',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        pathname: '**',
+      },
+
     ]
 
 

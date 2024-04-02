@@ -165,7 +165,7 @@ export function GaugeChart({ percentage, text }: GaugeChartProps) {
 
 export function StarRating({ rating }: { rating: number }) {
     const width = 4121;
-    const height = 4121;
+    const height = 4121; // 800 before
     const newwidth = width / 5 * rating;
     return (
 

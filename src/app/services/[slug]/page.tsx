@@ -12,7 +12,7 @@ export default function ServicesSection() {
         <h1 className="text-6xl mb-4">Coming Soon</h1>
         <p className="text-xl">We are currently working on this page. Please check back later.</p>
         <div>
-        <BackButton />
+        <BackButton buttonText="Back" className="secondary-btn"/>
         </div>
       </div>
       

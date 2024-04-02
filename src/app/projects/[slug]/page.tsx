@@ -1,12 +1,11 @@
 import { PortableText } from "@portabletext/react";
 import { SanityDocument } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
-
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import Carousel from "@/components/Carousel";
 import client from "@/utils/sanityClient";
 import Link from "next/link";
 import Image from "next/image";
 import urlFor from "@/utils/imgBuilder";
+import BackButton from "@/components/BackButton";
 
 const PROJECT_QUERY = `*[
     _type == "projects" &&
@@ -25,31 +24,65 @@ export default async function EventPage({
   const {
     name,
     description,
+    link,
     longDescription,
     image,
+    imageGallery,
   } = project;
 
+  let mappedImages = [];
 
+  if (imageGallery && imageGallery.length > 0) {
+    imageGallery.unshift(image);
+
+    mappedImages = imageGallery.map((item: any) => {
+      return urlFor(item.asset).url()
+    });
+  }
 
   return (
     <main>
-      <section className="h-16 splitbg"></section>
-      <section className="pt-20">
+      <section className="h-16 splitbg mb-8"></section>
+      <section className="">
         <div className="container mx-auto p-4">
-          <Link href="/projects">Back</Link>
-          <div className="flex justify-between">
+          <div className="w-full pb-8 text-right">
+            <BackButton buttonText="Go Back" className=" text-mainaccent-700 whitespace-nowrap" />
+          </div>
+          <div className="block lg:flex">
+            <div>
 
+              {imageGallery && imageGallery.length > 0 ?
 
-            <h2>{name}</h2>
-            <div className="w-60 h-60 relative">
-              <Image src={urlFor(image.asset).url()}
-                alt={name}
-                fill={true}
+                <Carousel images={mappedImages} /> :
+                <div className="relative aspect-square min-w-64 w-96 max-w-96">
+                  <Image src={urlFor(image.asset).url()}
+                    alt={name}
+                    fill={true}
 
-                className="rounded-lg border-2 border-mainaccent-700 mb-2 w-7"
-                quality={50} />
+                    className="rounded-lg border-2 border-mainaccent-700 mb-2 w-7"
+                    quality={50} />
+                </div>
+
+              }
+
             </div>
-            {/* <PortableText blocks={longDescription} /> */}
+
+            <div className="ml-auto lg:ml-10">
+
+              <h2 className="text-left">{name}</h2>
+              <p>{description}</p>
+              {link && <div className="my-5 text-sm overflow-hidden whitespace-nowrap">Link: &nbsp;
+                <Link href={link} target="_blank" className=" ">{link}</Link></div>}
+
+            </div>
+          </div>
+
+          <div>
+
+          </div>
+
+          <div className="pt-10">
+            {longDescription && <PortableText value={longDescription} />}
           </div>
         </div>
       </section>

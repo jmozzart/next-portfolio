@@ -238,9 +238,8 @@ const skills = [
 const hskills = [
   { name: 'Analytical', percentage: 92 },
   { name: 'Grit', percentage: 90 },
-/*   { name: 'Artistry', percentage: 75 }, */
-  { name: 'Organization', percentage: 48 },
-  { name: 'English', percentage: 69 },
+/* { name: 'Artistry', percentage: 75 }, */
+  { name: 'English', percentage: 75 },
   { name: 'Problem solving', percentage: 95 },
   { name: 'Attention to detail', percentage: 85 },
 ];

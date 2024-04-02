@@ -1,12 +1,16 @@
 "use client"
 import { useRouter } from 'next/navigation';
+type BackButtonProps = {
+  buttonText: string;
+  className: string;
+}
 
-export default function BackButton() {
+export default function BackButton(btnProps: BackButtonProps) {
     const router = useRouter();
 
     return (
-        <button onClick={() => router.back()} className="bg-mainaccent-700 hover:bg-cyan-500 text-white font-semibold py-2 px-4 rounded">
-            Go Back
+        <button onClick={() => router.back()} className={btnProps.className}>
+            {btnProps.buttonText}
         </button>
     );
 }
