@@ -67,7 +67,12 @@ export default async function EventPage({
               <p>{description}</p>
               {link && <div className="my-5 text-sm overflow-hidden whitespace-nowrap">Link: &nbsp;
                 <Link href={link} target="_blank" className=" ">{link}</Link></div>}
-
+                {project.relatedSkills && <div className="flex flex-wrap items-center justify-left">
+                                    {project?.relatedSkills.map((skill: any) => (
+                                        <span key={skill} className="text-xs bg-mainaccent-700 text-white rounded-full px-2 py-1 m-1 whitespace-nowrap">{skill}</span>
+                                    )).slice(0, 4)
+                                    }
+                                </div>}
             </div>
           </div>
 

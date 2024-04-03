@@ -2,10 +2,13 @@
 import { HTML, CSS, JS, ReactIcon, SASS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, PowerAutomate, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets} from "@/components/Icons";
 import React, { useState } from "react";
 import Link from "next/link";
-import Modal from "@/components/Modal";
+//import Modal from "@/components/Modal";
 import {Mdiv, Mh2, Mh3} from "@/components/AnimatedBlock";
 import { ProgressBar } from "@/components/Charts";
 import SkillIconCard from "@/components/SkillIconCard";
+import dynamic from 'next/dynamic'
+const Modal = dynamic(() => import('@/components/Modal'))
+
 
 
 const skills = [
@@ -294,7 +297,10 @@ export default function SkillsSection() {
         
       </Mdiv>
 
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+     {isModalOpen &&
+
+
+     <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div>
           <h3>
             {selectedSkill?.skill_name}
@@ -303,7 +309,7 @@ export default function SkillsSection() {
             {selectedSkill?.description}
           </p>
         </div>
-      </Modal>
+      </Modal> }
 
 
     </div>

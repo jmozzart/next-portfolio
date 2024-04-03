@@ -12,7 +12,10 @@ const query = `*[_type == "projects"] { _id, name, description, image, relatedSk
 
 
 
-export default async function FeaturedProjects() {
+
+
+
+export default async function ProjectsList() {
 
     const projects = await client.fetch<SanityDocument[]>(query);
 
@@ -20,7 +23,7 @@ export default async function FeaturedProjects() {
         <>
             {projects.length > 0 && (
                 <Mdiv className="flex flex-wrap justify-center">
-                    {projects.map((project) => (
+                    {projects.map((project, index) => (
 
                         <div key={project._id} className="m-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 max-w-60 flex flex-col justify-start">
                             <Link href={`/projects/${project?.slug?.current}`}>
@@ -32,11 +35,17 @@ export default async function FeaturedProjects() {
                                         height={320}
                                         className="rounded-lg border-2 border-mainaccent-700 mb-2"
                                         quality={50}
+                                        loading={index < 9 ? "eager" : "lazy"}
                                     />
                                 
+                                <div className="flex items-center justify-center text-center font-medium min-h-14 h-auto py-0.5">{project?.name}</div>
 
-
-                                <div className="text-center font-medium">{project?.name}</div>
+                                <div className="flex flex-wrap items-center justify-center">
+                                    {project.relatedSkills && project?.relatedSkills.map((skill: any) => (
+                                        <span key={skill} className="text-xs bg-mainaccent-700 text-white rounded-full px-2 py-1 m-1 whitespace-nowrap">{skill}</span>
+                                    )).slice(0, 4)
+                                    }
+                                </div>
                             </Link>
                         </div>
                     ))}
