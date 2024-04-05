@@ -5,6 +5,6 @@ export default createClient({
     projectId: 'xle5b8xj', 
     dataset: 'checkdataset', 
     useCdn: true,
-    //apiVersion: '2022-03-07',
-    apiVersion: "2024-01-01",
+    apiVersion: '2022-03-07',
+    //apiVersion: "2024-01-01",
 })

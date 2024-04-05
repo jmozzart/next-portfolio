@@ -12,6 +12,10 @@ export default async function Home() {
       <section >
         <div className="container mx-auto pt-20">
 
+          <h1 className="text-4xl lg:text-5xl font-bold text-center mb-12 text-mainaccent-700 text-slate">
+            Projects
+          </h1>
+
           <ProjectsList />
 
         </div>

@@ -22,10 +22,10 @@ export default async function ProjectsList() {
     return (
         <>
             {projects.length > 0 && (
-                <Mdiv className="flex flex-wrap justify-center">
+                <div className="flex flex-wrap justify-center">
                     {projects.map((project, index) => (
 
-                        <div key={project._id} className="m-5 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 max-w-60 flex flex-col justify-start">
+                        <div key={project._id} className="m-8 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 max-w-60 flex flex-col justify-start">
                             <Link href={`/projects/${project?.slug?.current}`}>
                                 
                                     <Image
@@ -42,14 +42,14 @@ export default async function ProjectsList() {
 
                                 <div className="flex flex-wrap items-center justify-center">
                                     {project.relatedSkills && project?.relatedSkills.map((skill: any) => (
-                                        <span key={skill} className="text-xs bg-mainaccent-700 text-white rounded-full px-2 py-1 m-1 whitespace-nowrap">{skill}</span>
+                                        <span key={skill} className="text-xs bg-mainaccent-700 text-white rounded-full px-2 py-1 m-1 whitespace-nowrap font-sans font-thin tracking-wider">{skill}</span>
                                     )).slice(0, 4)
                                     }
                                 </div>
                             </Link>
                         </div>
                     ))}
-                </Mdiv>
+                </div>
             )}
         </>
 
