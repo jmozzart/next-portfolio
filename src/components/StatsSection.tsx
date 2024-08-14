@@ -7,13 +7,13 @@ const platforms = [
   {
     name: 'Upwork',
     projectsCount: 22,
-    earnings: 3638.17,
+    earnings: 13638.17,
     averageReviews: 5,
   },
   {
     name: 'Fiverr',
     projectsCount: 14,
-    earnings: 981,
+    earnings: 1081,
     averageReviews: 5,
   },
   {
