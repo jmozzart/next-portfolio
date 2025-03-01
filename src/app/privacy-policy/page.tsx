@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
             <h1 className="text-6xl mb-4">Privacy Policy</h1>
             <p className="text-xl mb-4">Last updated: [Date]</p>
             <p className="text-left mb-4">
-              Your privacy is important to us. It is [Your Company Name]'s policy to respect your privacy regarding any information we may collect from you across our website, [Website URL], and other sites we own and operate.
+              Your privacy is important to us. It is Comicool Shop&apos;s policy to respect your privacy regarding any information we may collect from you across our website, [Website URL], and other sites we own and operate.
             </p>
             <p className="text-left mb-4">
               We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.
@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
               Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us.
             </p>
             <p className="text-left mb-4">
-              This policy is effective as of [Date].
+              This policy is effective as of 2024-03-12.
             </p>
           </div>
         </div>
