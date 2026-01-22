@@ -1,5 +1,5 @@
 "use client";
-import { HTML, CSS, JS, ReactIcon, SASS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, PowerAutomate, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets} from "@/components/Icons";
+import { HTML, CSS, JS, ReactIcon, SASS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, N8N, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets} from "@/components/Icons";
 import React, { useState } from "react";
 import Link from "next/link";
 //import Modal from "@/components/Modal";
@@ -110,6 +110,12 @@ const skills = [
     "skill_name": "Automation",
     "skills": [
       {
+        "skill_name": "N8N",
+        "icon": <N8N />,
+        "is_hidden": false,
+        "description": "n8n is a free and open node-based Workflow Automation Tool. It allows you to connect various apps and services to automate repetitive tasks without coding."
+      },
+      {
         "skill_name": "Zapier",
         "icon": <Zapier />,
         "is_hidden": false,
@@ -126,12 +132,6 @@ const skills = [
         "icon": <RESTAPI />,
         "is_hidden": true,
         "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
-      },
-      {
-        "skill_name": "Power Automate",
-        "icon": <PowerAutomate />,
-        "is_hidden": true,
-        "description": "Power Automate, formerly known as Microsoft Flow, is a cloud-based service that allows employees to create and automate workflows and tasks across multiple applications and services without help from developers."
       }
     ]
   },

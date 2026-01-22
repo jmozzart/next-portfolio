@@ -23,12 +23,11 @@ const contacts = [
 const highlights = [
   { icon: <UWTopRated />, text: 'Upwork Top Rated' },
   { icon: <UWJSS />, text: '100% Job Success Score in Upwork' },
-  { icon: <ResponsiveIcon />, text: 'Responsive Web Design' },
-  { icon: <Gear />, text: 'Automations (Zapier, Make)' },
+  { icon: <Gear />, text: 'Automations (N8N, Zapier, Make)' },
   { icon: <CRM />, text: 'CRM Development (GoHIghLevel, Hubspot, Monday.com, Clickfunnels)' },
-  { icon: <AI />, text: 'AI Integrations (OpenAI, Mistral, Langchain)' },
+  { icon: <AI />, text: 'Artificial Intelligence (Prompt Engineering, Retrieval-Augmented Generation, LLM Fine-Tuning, OpenAI, Claude, Gemini, Ollama)' },
   { icon: <Plug />, text: 'API Development and Integrations' },
-  { icon: <EcomLogo />, text: 'Ecommerce Development (Shopify, Woocommerce, Wix, Webflow)' },
+  { icon: <ResponsiveIcon />, text: 'Responsive Web Design' }
 ];
 
 export default function Home() {
@@ -49,7 +48,7 @@ export default function Home() {
                 Web Developer
               </p>
               <p className="text-l lg:text-xl text-mainaccent-700 text-slate mt-1 dark:text-cyan-500">
-                API | Automations Expert
+                AI | Automations Specialist
               </p>
 
               <div className="contact-info mt-4 text-gray-500 text-sm md:text-base items-center">
@@ -130,10 +129,7 @@ export default function Home() {
           <div className="mb-10">
             <Mh3>About Me</Mh3>
             <Mp>
-              I specialize in web development, particularly focusing on E-commerce platforms such as Shopify, Woocommerce, Bigcommerce, and more. Proficient in Wordpress, Wix, and Webflow, I am dedicated to creating websites using cutting-edge methods to ensure the best user experience while keeping costs manageable. Whether it is upgrading your website to modern technologies or incorporating specific features, I am committed to enhancing your online presence.
-            </Mp>
-            <Mp>
-              Moreover, I excel in streamlining business operations by leveraging modern tools and scripting expertise, helping businesses automate their processes efficiently.
+              As an Automation Expert with a rich background in web development, I bring a comprehensive expertise in designing and executing complex automation workflows using platforms like N8N, Make.com, and Zapier, in addition to implementing custom code solutions on cloud servers. My strong grasp of coding principles enhances my ability to leverage these low-code platforms effectively, ensuring seamless integration and optimization across systems. My experience as a web developer not only enriches my technical skills but also provides a robust foundation for understanding and applying coding standards that are crucial in automation processes.
             </Mp>
           </div>
           <div className="md:px-12">
