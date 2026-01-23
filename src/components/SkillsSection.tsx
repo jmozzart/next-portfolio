@@ -195,7 +195,7 @@ const skills = [
       /* {
         "skill_name": "MySQL",
         "icon": <MySQL />,
-        "is_hidden": true,cn n                                                        c 
+        "is_hidden": true,
         "description": "MySQL is an open-source relational database management system. Its name is a combination of 'My', the name of co-founder Michael Widenius's daughter, and 'SQL', the abbreviation for Structured Query Language."
       },*/
       {
