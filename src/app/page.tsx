@@ -45,7 +45,7 @@ export default function Home() {
                 Cyril Nicko Gaspar
               </h1>
               <p className="text-xl lg:text-2xl font-bold  mt-4 text-mainaccent-700 text-slate">
-                AI & Automations Specialist
+                AI & Automations Engineer
               </p>
               <p className="text-l lg:text-xl text-mainaccent-700 text-slate mt-1 dark:text-cyan-500">
                 Full-stack Development | N8N, Make.com, Zapier | CRM Solutions

@@ -18,7 +18,7 @@ const platforms = [
   },
   {
     name: 'Direct',
-    projectsCount: 3,
+    projectsCount: 19,
     earnings: 14853,
     averageReviews: null,
   }
