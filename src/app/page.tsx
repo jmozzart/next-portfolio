@@ -24,7 +24,7 @@ const highlights = [
   { icon: <UWTopRated />, text: 'Upwork Top Rated' },
   { icon: <UWJSS />, text: '100% Job Success Score in Upwork' },
   { icon: <Gear />, text: 'Automations (N8N, Zapier, Make)' },
-  { icon: <CRM />, text: 'CRM Development (GoHIghLevel, Hubspot, Monday.com, Clickfunnels)' },
+  { icon: <CRM />, text: 'CRM Development (GoHIghLevel, Hubspot, Clickfunnels)' },
   { icon: <AI />, text: 'Artificial Intelligence (Prompt Engineering, Retrieval-Augmented Generation, LLM Fine-Tuning, OpenAI, Claude, Gemini, Ollama)' },
   { icon: <Plug />, text: 'API Development and Integrations' },
   { icon: <ResponsiveIcon />, text: 'Responsive Web Design' }
@@ -45,12 +45,12 @@ export default function Home() {
                 Cyril Nicko Gaspar
               </h1>
               <p className="text-xl lg:text-2xl font-bold  mt-4 text-mainaccent-700 text-slate">
-                AI | Automations Specialist
+                AI & Automations Specialist
               </p>
-              {/* <p className="text-l lg:text-xl text-mainaccent-700 text-slate mt-1 dark:text-cyan-500">
-                AI | Automations Specialist
+              <p className="text-l lg:text-xl text-mainaccent-700 text-slate mt-1 dark:text-cyan-500">
+                Full-stack Development | N8N, Make.com, Zapier | CRM Solutions
               </p>
- */}
+
               <div className="contact-info mt-4 text-gray-500 text-sm md:text-base items-center">
 
                 <div className="py-2 flex flex-row space-x-4 mt-4">
@@ -192,8 +192,8 @@ export default function Home() {
             />
             <ServiceCard
               icon={<CRM />}
-              title="CRM Development"
-              description="Custom CRM solutions for your business."
+              title="CRM Extensions Development"
+              description="Integrations of 3rd party services and automation into your CRM system."
             />
 
 

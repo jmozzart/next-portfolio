@@ -1,5 +1,5 @@
 "use client";
-import { JS, ReactIcon, NodeJS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, N8N, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets, Python} from "@/components/Icons";
+import { PostgreSQL, JS, ReactIcon, NodeJS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, N8N, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets, Python} from "@/components/Icons";
 import React, { useState } from "react";
 import Link from "next/link";
 //import Modal from "@/components/Modal";
@@ -156,13 +156,13 @@ const skills = [
         "icon": <ClickFunnels />,
         "is_hidden": true,
         "description": "ClickFunnels is a website and sales funnel builder for entrepreneurs. ClickFunnels allows you to build landing pages, sales pages, and complete sales funnels."
-      },
+      }/* ,
       {
         "skill_name": "Monday.com",
         "icon": <Monday />,
-        "is_hidden": false,
+        "is_hidden": true,
         "description": "Monday.com is a cloud-based work operating system that powers teams to run processes, projects, and everyday work their way."
-      }
+      } */
     ]
   },
   {
@@ -198,12 +198,12 @@ const skills = [
         "is_hidden": true,cn n                                                        c 
         "description": "MySQL is an open-source relational database management system. Its name is a combination of 'My', the name of co-founder Michael Widenius's daughter, and 'SQL', the abbreviation for Structured Query Language."
       },*/
-     /*  {
+      {
         "skill_name": "PostgreSQL",
         "icon": <PostgreSQL />,
         "is_hidden": true,
         "description": "PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance."
-      }  */
+      } 
     ]
 
   }
