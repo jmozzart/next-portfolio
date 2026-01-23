@@ -6,20 +6,20 @@ import {Mdiv} from '@/components/AnimatedBlock';
 const platforms = [
   {
     name: 'Upwork',
-    projectsCount: 22,
-    earnings: 13638.17,
-    averageReviews: 5,
+    projectsCount: 81,
+    earnings: 35400,
+    averageReviews: 4.7,
   },
   {
     name: 'Fiverr',
     projectsCount: 14,
-    earnings: 1081,
-    averageReviews: 5,
+    earnings: 2100,
+    averageReviews: 4.8,
   },
   {
     name: 'Direct',
     projectsCount: 3,
-    earnings: 455,
+    earnings: 14853,
     averageReviews: null,
   }
 ];
@@ -27,7 +27,7 @@ const platforms = [
 const projectscount = platforms.map(platform => ({ name: platform.name, value: platform.projectsCount }));
 const earnings = platforms.map(platform => ({ name: platform.name, value: platform.earnings }));
 const filteredPlatforms = platforms.filter(platform => platform.averageReviews !== null);
-const aveReviews = filteredPlatforms.reduce((total, platform) => total + (platform.averageReviews || 0), 0) / filteredPlatforms.length;
+const aveReviews = Number((filteredPlatforms.reduce((total, platform) => total + (platform.averageReviews || 0), 0) / filteredPlatforms.length).toFixed(1));
 
 const StatsSection = () => (
   <>

@@ -171,12 +171,12 @@ export function StarRating({ rating }: { rating: number }) {
 
 
         <svg x="0px" y="0px" viewBox={`0 0 ${width} ${height}`}>
-            <text fontSize="1800" x="40%" y="50%" textAnchor="middle" dominantBaseline="middle" className="fill-mainaccent-700 font-semibold">
+            <text fontSize="1800" x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" className="fill-mainaccent-700 font-semibold">
                 {rating}
             </text>
-            <text fontSize="1000" x="65%" y="53%" textAnchor="middle" dominantBaseline="middle" className="fill-gray-400 font-semibold ">
+       {/*      <text fontSize="100" x="65%" y="53%" textAnchor="middle" dominantBaseline="middle" className="fill-gray-400 font-semibold ">
                 /5
-            </text>
+            </text> */}
             <g transform={`translate(0, ${height - 800})`} >
                 <defs>
                     <clipPath id="maskfv">

@@ -1,5 +1,5 @@
 "use client";
-import { HTML, CSS, JS, ReactIcon, SASS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, N8N, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets} from "@/components/Icons";
+import { JS, ReactIcon, NodeJS, TypeScript, TailwindCSS, NextJS, Firebase, RESTAPI, Zapier, Make, N8N, Sanity, Shopify, Wordpress, Velo, HubSpot, GoHighLevel, ClickFunnels, Monday, Airtable, Excel, GoogleSheets, Python} from "@/components/Icons";
 import React, { useState } from "react";
 import Link from "next/link";
 //import Modal from "@/components/Modal";
@@ -13,19 +13,20 @@ const Modal = dynamic(() => import('@/components/Modal'))
 
 const skills = [
   {
-    "skill_name": "Web Development",
+    "skill_name": "Frontend Development",
     "skills": [
-      { "skill_name": "HTML5",
+      /* { "skill_name": "HTML5",
       "icon": <HTML />,
       "is_hidden": true,
       "description":
       "HTML5 is a markup language used for structuring and presenting hypertext documents on the World Wide Web. It was the fifth and final major HTML version that is now a retired World Wide Web Consortium recommendation. The current specification is known as the HTML Living Standard." 
-    },
+    }, 
       {
         "skill_name": "CSS3",
         "icon": <CSS />,
         "is_hidden": true,
-        "description": "CSS3 stands for Cascading Style Sheet level 3, which is the advanced version of CSS. It is used for structuring, styling, and formatting web pages. Several new features have been added to CSS3 and it is supported by all modern web browsers." },
+        "description": "CSS3 stands for Cascading Style Sheet level 3, which is the advanced version of CSS. It is used for structuring, styling, and formatting web pages. Several new features have been added to CSS3 and it is supported by all modern web browsers." 
+        },*/
       {
         "skill_name": "JavaScript",
         "icon": <JS />,
@@ -38,12 +39,12 @@ const skills = [
         "is_hidden": false,
         "description": "React is a JavaScript library for building user interfaces, primarily for single-page applications. It's used for handling the view layer in web and mobile apps."
       },
-      {
+      /* {
         "skill_name": "Sass",
         "icon": <SASS />,
         "is_hidden": true,
         "description": "Sass is a preprocessor scripting language that is interpreted or compiled into CSS. It's a mature, stable, and powerful professional grade CSS extension."
-      },
+      }, */
       {
         "skill_name": "TypeScript",
         "icon": <TypeScript />,
@@ -65,9 +66,21 @@ const skills = [
       // ... and so on for the rest of the skills
     ]
   },
- /*  {
-    "skill_name": "Backend",
+   {
+    "skill_name": "Backend and Automation",
     "skills": [
+       {
+        "skill_name": "N8N",
+        "icon": <N8N />,
+        "is_hidden": false,
+        "description": "n8n is a free and open node-based Workflow Automation Tool. It allows you to connect various apps and services to automate repetitive tasks without coding."
+      },
+      {
+        "skill_name": "Python",
+        "icon": <Python />,
+        "is_hidden": true,
+        "description": "Python is a high-level, interpreted programming language known for its readability and versatility. It supports multiple programming paradigms and is widely used in web development, data analysis, artificial intelligence, scientific computing, and more."
+      },
       {
         "skill_name": "NodeJS",
         "icon": <NodeJS />,
@@ -75,45 +88,10 @@ const skills = [
         "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
       },
       {
-        "skill_name": "Firebase",
-        "icon": <Firebase />,
-        "is_hidden": false,
-        "description": "Firebase is a platform developed by Google for creating mobile and web applications. It provides tools and services to help developers build high-quality apps, grow their user base, and earn more money."
-      },
-      {
         "skill_name": "REST API",
         "icon": <RESTAPI />,
         "is_hidden": true,
         "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
-      },
-      {
-        "skill_name": "Vercel",
-        "icon": <Vercel />,
-        "is_hidden": true,
-        "description": "Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with your workflow. It enables developers to host websites and web services that deploy instantly, scale automatically, and requires no supervision, all with no configuration."
-      },
-      {
-        "skill_name": "Netlify",
-        "icon": <Netlify />,
-        "is_hidden": true,
-        "description": "Netlify is a web developer platform that multiplies productivity. By unifying the elements of the modern decoupled web, from local development to advanced edge logic, Netlify enables a 10x faster path to much more performant, secure, and scalable websites and apps."
-      },
-      {
-        "skill_name": "Azure",
-        "icon": <Azure />,
-        "is_hidden": false,
-        "description": "Microsoft Azure, commonly referred to as Azure, is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers."
-      }
-    ]
-  }, */
-  {
-    "skill_name": "Automation",
-    "skills": [
-      {
-        "skill_name": "N8N",
-        "icon": <N8N />,
-        "is_hidden": false,
-        "description": "n8n is a free and open node-based Workflow Automation Tool. It allows you to connect various apps and services to automate repetitive tasks without coding."
       },
       {
         "skill_name": "Zapier",
@@ -126,12 +104,6 @@ const skills = [
         "icon": <Make />,
         "is_hidden": false,
         "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. It allows you to automate parts of the build process."
-      },
-      {
-        "skill_name": "REST API",
-        "icon": <RESTAPI />,
-        "is_hidden": true,
-        "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
       }
     ]
   },
