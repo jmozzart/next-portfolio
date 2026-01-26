@@ -12,6 +12,47 @@ const Modal = dynamic(() => import('@/components/Modal'))
 
 
 const skills = [
+     {
+    "skill_name": "Automation & Backend Development",
+    "skills": [
+       {
+        "skill_name": "N8N",
+        "icon": <N8N />,
+        "is_hidden": false,
+        "description": "n8n is a free and open node-based Workflow Automation Tool. It allows you to connect various apps and services to automate repetitive tasks without coding."
+      },
+      {
+        "skill_name": "Python",
+        "icon": <Python />,
+        "is_hidden": true,
+        "description": "Python is a high-level, interpreted programming language known for its readability and versatility. It supports multiple programming paradigms and is widely used in web development, data analysis, artificial intelligence, scientific computing, and more."
+      },
+      {
+        "skill_name": "NodeJS",
+        "icon": <NodeJS />,
+        "is_hidden": false,
+        "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
+      },
+      {
+        "skill_name": "REST API",
+        "icon": <RESTAPI />,
+        "is_hidden": true,
+        "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
+      },
+      {
+        "skill_name": "Zapier",
+        "icon": <Zapier />,
+        "is_hidden": false,
+        "description": "Zapier is an online automation tool that connects your favorite apps, such as Gmail, Slack, Mailchimp, and more. You can connect two or more apps to automate repetitive tasks without coding or relying on developers to build the integration."
+      },
+      {
+        "skill_name": "Make.com",
+        "icon": <Make />,
+        "is_hidden": false,
+        "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. It allows you to automate parts of the build process."
+      }
+    ]
+  },
   {
     "skill_name": "Frontend Development",
     "skills": [
@@ -66,47 +107,7 @@ const skills = [
       // ... and so on for the rest of the skills
     ]
   },
-   {
-    "skill_name": "Backend and Automation",
-    "skills": [
-       {
-        "skill_name": "N8N",
-        "icon": <N8N />,
-        "is_hidden": false,
-        "description": "n8n is a free and open node-based Workflow Automation Tool. It allows you to connect various apps and services to automate repetitive tasks without coding."
-      },
-      {
-        "skill_name": "Python",
-        "icon": <Python />,
-        "is_hidden": true,
-        "description": "Python is a high-level, interpreted programming language known for its readability and versatility. It supports multiple programming paradigms and is widely used in web development, data analysis, artificial intelligence, scientific computing, and more."
-      },
-      {
-        "skill_name": "NodeJS",
-        "icon": <NodeJS />,
-        "is_hidden": false,
-        "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
-      },
-      {
-        "skill_name": "REST API",
-        "icon": <RESTAPI />,
-        "is_hidden": true,
-        "description": "REST (Representational State Transfer) is an architectural style for designing networked applications. A REST API is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers."
-      },
-      {
-        "skill_name": "Zapier",
-        "icon": <Zapier />,
-        "is_hidden": false,
-        "description": "Zapier is an online automation tool that connects your favorite apps, such as Gmail, Slack, Mailchimp, and more. You can connect two or more apps to automate repetitive tasks without coding or relying on developers to build the integration."
-      },
-      {
-        "skill_name": "Make.com",
-        "icon": <Make />,
-        "is_hidden": false,
-        "description": "GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. It allows you to automate parts of the build process."
-      }
-    ]
-  },
+
   {
     "skill_name": "CMS & Web Builders",
     "skills": [

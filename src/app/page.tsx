@@ -129,7 +129,7 @@ export default function Home() {
           <div className="mb-10">
             <Mh3>About Me</Mh3>
             <Mp>
-              As an Automation Expert with a rich background in web development, I bring a comprehensive expertise in designing and executing complex automation workflows using platforms like N8N, Make.com, and Zapier, in addition to implementing custom code solutions on cloud servers. My strong grasp of coding principles enhances my ability to leverage these low-code platforms effectively, ensuring seamless integration and optimization across systems. My experience as a web developer not only enriches my technical skills but also provides a robust foundation for understanding and applying coding standards that are crucial in automation processes.
+              With a rich background in web development, I bring a comprehensive expertise in designing and executing complex automation workflows using platforms like N8N, Make.com, and Zapier, in addition to implementing custom code solutions on cloud servers. My strong grasp of coding principles enhances my ability to leverage these low-code platforms effectively, ensuring seamless integration and optimization across systems. My experience as a web developer not only enriches my technical skills but also provides a robust foundation for understanding and applying coding standards that are crucial in automation processes.
             </Mp>
           </div>
           <div className="md:px-12">
